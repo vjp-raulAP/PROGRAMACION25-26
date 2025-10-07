@@ -15,6 +15,7 @@ public class desgloseBilletes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //declaro las variables que voy a usar
         int cantidadTotal,billetes50,resto50,billetes20,resto20,billetes10,resto10,billetes5,resto5,monedas2,monedas1;
         Scanner  eurosTotal= new Scanner(System.in);
          System.out.println("Por favor, indique una cantidad de dinero: ");
@@ -40,7 +41,7 @@ public class desgloseBilletes {
         
         
         System.out.println(cantidadTotal + " Euros de descomponen en ");
-        
+        //condicionantes para que salga por pantalla o no
         if (billetes50 > 0){
             System.out.println("Billetes de 50: " + billetes50);
         }
