@@ -27,7 +27,7 @@ public class numeroMayor {
         num2 = numero.nextInt();
         System.out.println("Introduzca el tercer número: ");
         num3 = numero.nextInt();
-        
+        //creo los ocndicionales
         if ((num1 > num2)&(num1 > num3)){
             System.out.println("El numero mayor de los introducidos es: " +num1);
             
