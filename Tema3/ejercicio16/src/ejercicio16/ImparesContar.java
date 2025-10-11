@@ -16,22 +16,22 @@ public class ImparesContar {
     public static void main(String[] args) {
         //Declaro dos variables. la "i" sera para recorrer el bucle de 20 a 160. "numeroImpares" para contar el numeros impares
         int i = 20;
-        int numeroImpares = 0;
+        int cantidadImpares = 0;
         
         
-        System.out.println("Los numeros impares existentes entre el 20 y 160 son: " ); //imprimo por pantalla 
+        System.out.println("Los numeros impares existentes entre el 20 y 160 son: " ); //imprimo por pantalla los numeros que complen co el if
         while(i <=160) {
             if( i % 2 !=0){
                 System.out.print(i);
-            if(i < 159 ){
+            if(i < 159 ){     //añado este if para poner el guón . Lo pongo hasta 159 para que no me imprima el "-" despues de 159
                 System.out.print(" - ");
             }
-                numeroImpares ++;
+                cantidadImpares ++;  //sumo 1 al contador de numeros impares
             }
-          i++;  
+          i++;   //sumo 1 al contador del bucle desde 20 a 160
         }
-        System.out.println();
-        System.out.println( "La cantidad de numeros impares impresos has sido: " + numeroImpares);
+        System.out.println(); // siguiente linea
+        System.out.println( "La cantidad de numeros impares impresos ha sido: " + cantidadImpares); //imprimo cantidad de impares
         
     }
     
