@@ -19,27 +19,28 @@ public class contrasena {
         int contraseña = 5432;  // contraseña correcta
         int entradaContrasena; // Entrada de la contraseña por teclado del usuario
         int contadorIntentos= 0; // contador de intentos
-     
+        boolean aciertos = false; //
         
         Scanner entrada = new Scanner(System.in);
         
         do{
             System.out.println("Introduzca la contraseña: ");
-            entradaContrasena = entrada.nextInt();
-            contadorIntentos ++;
+            entradaContrasena = entrada.nextInt(); //leemos la contraseña 
+            contadorIntentos ++; //aumenta el contador
             
+            //comprobamos si la contraseña es correcta
             if (contraseña == entradaContrasena){
-              
+                aciertos = true; //
                 System.out.println("Contraseña correcta");
                 
             }else {
                 System.out.println("Contraseña incorrecta. intento numero " + contadorIntentos + " de 3 intentos");
             }
             
-        }while ( contadorIntentos < 3);
-                
-        System.out.println(contadorIntentos);
-        if (contadorIntentos == 3 ){
+        }while (aciertos == false && contadorIntentos < 3);//se repite mientras no haya acertado y el contador sea menor a 3
+             
+        //si falla los tres intentos mensaje de no superado
+        if (aciertos == false && contadorIntentos == 3 ){
             System.out.println("Has superado los 3 intentos permitidos");
         }
         
