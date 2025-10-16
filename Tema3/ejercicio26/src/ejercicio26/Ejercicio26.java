@@ -21,9 +21,9 @@ public class Ejercicio26 {
         System.out.println("Los números impares entre 111 y 222 son: "); 
         //creo un bucle for que recorra del 17 al 139 
         for (i = 111; i <= 222; i++) {
-            if (i % 2 != 0) {  //obtengo los numeros pares 
+            if (i % 2 != 0) {  //obtengo los numeros impares 
                 System.out.print(i); //imprimo numeros  .
-                suma = suma + i; //uso este contador para ir sumando los numeros pares que salgan
+                suma = suma + i; //uso este contador para ir sumando los numeros impares que salgan
                 if (i < 221) {   //creo un condicionante para que solo me imprima hasta el último numero par
                     System.out.print(", ");    
                 }
