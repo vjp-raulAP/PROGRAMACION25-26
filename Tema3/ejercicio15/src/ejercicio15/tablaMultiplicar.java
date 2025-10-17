@@ -17,7 +17,7 @@ public class tablaMultiplicar {
      */
     public static void main(String[] args) {
         //Declaro las variables que voy a usar 
-        int i = 1;
+        int i = 0;
         int numero;
         int resultado;
         
