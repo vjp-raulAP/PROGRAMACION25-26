@@ -36,7 +36,7 @@ public class numeroMenor {
         else if ((num2 < num1)&(num2 <num3)){ //lo mismo con num2
             System.out.println("El numero menor de los introducidos es: " +num2);
         }
-        else { //
+        else { 
             System.out.println("El numero menor de los introducidos es: " +num3);
         }
     }

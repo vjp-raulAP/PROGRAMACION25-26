@@ -18,13 +18,16 @@ public class notasAlumno {
     public static void main(String[] args) {
        
         //Creo el scanner que lea los datos
-        Scanner numero = new Scanner(System.in);
-        float nota;
-        System.out.println("Por favor, introduzca su calificación:  ");
-        //declaro varibles
-        nota =  numero.nextFloat();
+        Scanner notaUsuario = new Scanner(System.in);
+        //declaro varibles. En este caso uso int xq el rango que me dan son enteros
+        int nota;
         
-        if (nota >= 0 & nota <=4){
+        //pido la nota al usuario y la guarda en nota
+        System.out.println("Por favor, introduzca su calificación:  ");
+        nota =  notaUsuario.nextInt();
+        
+        //condicion para cada rango de nota
+        if (nota >= 0 & nota <=4){  
               System.out.println("Su calificación es  Suspenso");
             }
             else if (nota >= 5 & nota <= 6){
@@ -37,7 +40,7 @@ public class notasAlumno {
             else if (nota >=9 & nota <=10){
                 System.out.println("Su calificación es Sobresaliente");
             }
-            else {
+            else { //si no es el numero entre 0 y 10 da error
                 System.out.println("Error . La nota debe de estar entre 0 y 10 ");
             }
        
