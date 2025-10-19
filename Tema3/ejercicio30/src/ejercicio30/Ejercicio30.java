@@ -8,6 +8,7 @@ package ejercicio30;
  *
  * @author rulaa
  */
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Ejercicio30 {
 
@@ -19,10 +20,13 @@ public class Ejercicio30 {
         int numeroAleatorio = (int)(Math.random()*100+1);
         int contador=0;
         int numeroJugador;
+        boolean acierto = false;
         System.out.println(numeroAleatorio); //Para ver que funciona correctamente el aleatorio
         System.out.println("------ADIVINA EL NUMERO ENTRE 1 Y 100---------");
         
         do {
+           
+            try{
             System.out.println("Introduce un numero entre 0 y 100: ");
             numeroJugador = num.nextInt();
             contador++;
@@ -42,8 +46,14 @@ public class Ejercicio30 {
                 System.out.println("******  HAS ACERTADO  ******");
                 System.out.println("****************************");
                 System.out.println("Lo has acertado en el intento: " + contador);
+                acierto = true;
             }
-        } while (numeroJugador != numeroAleatorio);
+            }catch (InputMismatchException e){
+                System.out.println("Debes introducir un número valido entre 1 y 100");
+                num.nextLine();
+                contador++;
+            }
+        } while (!acierto);
     }
     
 }

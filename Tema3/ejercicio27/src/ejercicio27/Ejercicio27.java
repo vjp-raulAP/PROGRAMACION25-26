@@ -8,6 +8,7 @@ package ejercicio27;
  *
  * @author rulaa
  */
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Ejercicio27 {
 
@@ -17,28 +18,31 @@ public class Ejercicio27 {
     public static void main(String[] args) {
         //Declaramos variables
         Scanner numero = new Scanner (System.in);
-        float num1;
-        float num2;
-        int opcion;
-        float resultado;
+        int num1;   //variable int. Si pongo float no me salta control de excepciones
+        int num2;   //variabke int. Si pongo float no me salta control de excepciones
+        int opcion = 0;  //variable que uso para el switch
+        float resultado; // Almaceno resultado  la operaciones
         //uso el condicionante do while para que al menos una vez me saga la introduccion de datos y opciones que el usuario va a necesitar
         do {
+            try{
         //Pido al usuario los números por patallas
         System.out.println("Por favor, introduzca el primer numero: ");
-            num1 = numero.nextFloat();
+            num1 = numero.nextInt();
         System.out.println("Por favor, introduzca el segundo numero: ");
-            num2 = numero.nextFloat();
+            num2 = numero.nextInt();
             
         //creo las opciones que tiene el usuario y que se repetirá al menos una vez
         
-            System.out.println("----- OPCIONES ------");
+            System.out.println("--------- OPCIONES ----------");
             System.out.println("1.- Sumar los números");
             System.out.println("2.- Restar los números");
             System.out.println("3.- Multiplicar los números");
             System.out.println("4.- Dividir los numeros");
             System.out.println("5.- Salir del programa");
+            System.out.println("-----------------------------");   
             opcion = numero.nextInt();
-            switch (opcion){  //Creo el switch para que me ejecute la opcion dada por el cliente
+           
+            switch (opcion){  //Creo el switch para que me ejecute la opcion introducida por el usuario
                 case 1:
                     resultado = num1 +num2;
                     System.out.println("La suma de " +num1 + " + "+ num2 +" = " + resultado  );
@@ -55,14 +59,13 @@ public class Ejercicio27 {
                     
                     break;
                 case 4:
-                    if (num2 == 0){
-                        System.out.println("Error: no se puede dividir entre 0"); //Control en cso de division por 0 
-                        
-                    }else{
-                    resultado = num1 / num2;
-                    System.out.println("La division de " +num1 + " / " + num2 + " = " + resultado);
-                    
+                    try {
+                        resultado = num1 /num2;
+                        System.out.println("La division de "+num1 + " / " +num2 + " = " +resultado);
+                    }catch(ArithmeticException e){
+                        System.out.println("Error: No se puede dividir entre 0.");
                     }
+                            
                     break;
                 case 5:
                     System.out.println("Saliendo del programa , gracias...");//opción salir del programa
@@ -71,7 +74,10 @@ public class Ejercicio27 {
                 default:
                     System.out.println("Opción no valida. elija una opcion del 1 al 5"); //Para opcion diferentes a las enumeradas anteriormente
                    
-                    break;
+                } 
+            }catch(InputMismatchException e){   //Captura de la excepcion números
+                System.out.println(" Error: Debes introducir números válidos.");
+                numero.nextLine(); //limpia la entrada. sino se me ejecuatia en bucle 
             }
             } while (opcion != 5);
         }  
