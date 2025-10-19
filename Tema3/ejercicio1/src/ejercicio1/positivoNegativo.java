@@ -18,19 +18,17 @@ public class positivoNegativo {
     public static void main(String[] args) {
        //Creo el scanner que lea los datos
         Scanner num = new Scanner(System.in);
-       
+        //declaro varible  donde se almacena el numero introducido por el usuario
         int numero;
        
-        System.out.println("Por favor, introduzca un numero:  ");
-        //declaro varibles
-        numero =  num.nextInt();
+        System.out.println("Por favor, introduzca un numero:  "); //pido al usuario un numero
+        numero =  num.nextInt(); 
        
         
-        if (numero > 0) { 
+        if (numero > 0) {  //condicion si es mayor a 0 positivo, si es menor negativo
            
             System.out.println("El número introducido es positivo");
         }
-    
         else { 
             System.out.println("El número introducido es negativo");
         }
