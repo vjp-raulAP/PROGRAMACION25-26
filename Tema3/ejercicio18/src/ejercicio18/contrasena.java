@@ -44,6 +44,12 @@ public class contrasena {
             System.out.println("Has superado los 3 intentos permitidos");
         }
         
+<<<<<<< HEAD
+=======
+        
+        
+        
+>>>>>>> f78106ff1107baca1aebe7005720a66e51343f6e
     }
     
 }

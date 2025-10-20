@@ -77,7 +77,11 @@ public class Ejercicio27 {
                 } 
             }catch(InputMismatchException e){   //Captura de la excepcion números
                 System.out.println(" Error: Debes introducir números válidos.");
+<<<<<<< HEAD
                 numero.nextLine(); //limpia la entrada. sino se me ejecuata en bucle 
+=======
+                numero.nextLine(); //limpia la entrada. sino se me ejecuatia en bucle 
+>>>>>>> f78106ff1107baca1aebe7005720a66e51343f6e
             }
             } while (opcion != 5);
         }  
