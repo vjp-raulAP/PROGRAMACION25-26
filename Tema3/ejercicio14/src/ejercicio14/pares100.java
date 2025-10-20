@@ -15,12 +15,17 @@ public class pares100 {
      */
     public static void main(String[] args) {
           //declaro la variable "i" y la inicializo a 1 
-        int i = 1;
-        while(i<= 100){  //pongo la condición para el bucle hasta 100
-            if (i% 2 == 0){  //creo la condicion de par /impar
-                System.out.println(i); 
+        int i = 0;
+        int j = i;
+        
+        System.out.println("Los 100 primeros numeros pares son: ");
+        do {
+            if (i % 2 == 0) {
+                System.out.println(i);
+                j++;
             }
-           i++;  //incremento en 1 la variable fuera del if. si lo hago dentro me haria bucle  
-        }
+            i++;  //incremento en 1 la variable fuera del if. si lo hago dentro me haria bucle  
+        } while (j < 100);
+            System.out.println("Sacó un total de " + j + " números");
     }
 }
