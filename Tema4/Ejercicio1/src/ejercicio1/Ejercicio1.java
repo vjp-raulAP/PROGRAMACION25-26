@@ -14,9 +14,10 @@ public class Ejercicio1 {
     /**
      * @param args the command line arguments
      * 
-     * 
+     * Ejercicio 1 
      * 
      */
+    //creo el metodo que que me pida el numero al usuario
     public static int pedirNum (){
         int numero;
         Scanner entrada = new Scanner(System.in);
@@ -24,7 +25,7 @@ public class Ejercicio1 {
         numero = entrada.nextInt();
         return numero;
     }
-    
+     //
     public static void main(String[] args) {
          int numero = Ejercicio1.pedirNum();
          if(numero > 0){
