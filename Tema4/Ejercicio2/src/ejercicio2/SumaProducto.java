@@ -17,20 +17,29 @@ public class SumaProducto {
     
     
     public static void main(String[] args) {
-        int numero;
+        int num1;
+        int num2;        
+        int resultado;
+        
        Scanner entrada = new Scanner(System.in);
         System.out.println("Introduce un numero");
-        numero = entrada.nextInt();
+        num1 = entrada.nextInt();
         
-        if(numero > 10){
-            
+        System.out.println("Introduce el segundo numero. ");
+        num2 = entrada.nextInt();
+        
+        if(num1 > 10){
+            resultado = Operaciones.multiplicacion(num1, num2);
+            System.out.println("La operación que se realizó es producto y el resultado es " + resultado);
         }
         else{
-            
+            resultado = Operaciones.suma(num1, num2);
+             System.out.println("La operación que se realizó es suma y el resultado es " + resultado);
+        }
         }
         
         
         
     }
     
-}
+
