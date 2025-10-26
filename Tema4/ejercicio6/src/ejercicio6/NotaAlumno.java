@@ -10,7 +10,12 @@ package ejercicio6;
  */
 
 public class NotaAlumno  {
+    /**
+     * Método que pasamos el parámetro nota y nos clasifica la nota en función del valor entre 0 y 10
+     * @param nota 
+     */
     public static void mostrarClasificacion (int nota){
+        //condion  en funcíón d ela nota
         if (nota >=0 & nota <= 4){
             System.out.println("Su calificación es de suspenso. ");
         }
