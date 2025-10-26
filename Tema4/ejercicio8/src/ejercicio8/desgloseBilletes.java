@@ -22,7 +22,8 @@ public class desgloseBilletes {
         Scanner eurosTotal = new Scanner(System.in);
         System.out.println("Por favor, indique una cantidad de dinero: "); 
         cantidadTotal = eurosTotal.nextInt();
-        
+        //llamo al método mostrarDesglose con el parametro cantidadTotal.
+        mostrarDesglose(cantidadTotal);
     }
     
     
