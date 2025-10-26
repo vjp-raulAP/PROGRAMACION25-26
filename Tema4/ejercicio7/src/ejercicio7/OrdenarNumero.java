@@ -49,7 +49,7 @@ public class OrdenarNumero {
                 } 
                 i++;
             }while (i < 4);
-            
+            //llamo al metodo dentro del mismo paquete OrdenMenosmas que está en la clase OrdenarNumeros.
            OrdenarNumeros.ordenMenosMas(num1, num2, num3, num4);
             
         }
