@@ -9,6 +9,13 @@ package utilidades;
  * @author rulaa
  */
 public class Comparador {
+    /**
+     *  Metodo para encontrar el número mayor de tres variables.
+     * @param num1
+     * @param num2
+     * @param num3
+     * @return numMayor que será un int 
+     */
     //creo el metodo "encontrarMayor"  estatico para que pueda llamarlo desde cualquier clase que recibe 3 parametros (num1,num2,num3)
     public static int encontrarMayor (int num1,int num2, int num3){
         //declaro variable donde guardaré el resultado y inicializo suponiendo que "num1" es mayor.

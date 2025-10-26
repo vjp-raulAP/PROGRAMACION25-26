@@ -19,8 +19,24 @@ public class NumeroMayor {
      */
     
     public static void main(String[] args) {
+    
+        //Creo el scanner para la entrada de datos 
         Scanner numeroUsuario = new Scanner(System.in);
-        //Pido al usuario un numero.
+        //creo las variables y la variable Mayor que recogere del la clase Comparador
+        int num1,num2,num3,Mayor;
+        //Pido al usuario 3 numeros
+        System.out.println("Por favor,  introduzca el primer numero: ");
+        num1 = numeroUsuario.nextInt();
+        System.out.println("Ahora, introduzca un segundo numero: ");
+        num2 = numeroUsuario.nextInt();
+        System.out.println("Por último introduzca un tercer numero:  ");
+        num3 = numeroUsuario.nextInt();
+        //llamamos al Médoto "encontrarMayor" de la clase "comparador" y guardamos en la variable Mayor
+      Mayor = Comparador.encontrarMayor(num1,num2,num3);
+                
+        System.out.println("El numero mayor de los introducidos es el " +Mayor);
+        
+        
     }
     
 }
