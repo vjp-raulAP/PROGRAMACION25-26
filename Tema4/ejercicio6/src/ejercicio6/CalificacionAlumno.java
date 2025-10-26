@@ -26,8 +26,8 @@ public class CalificacionAlumno {
         //Pedimos la usuario la nota.
         System.out.println("Introduce la nota de 1 al 10.");
         nota = notaAlumno.nextInt();
-        
-        
+        //llamamos al método de la clase Nota alumno pasando el parámetro que el usuario nos ha dado.
+        NotaAlumno.mostrarClasificacion(nota);
         
     }
     
