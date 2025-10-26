@@ -9,6 +9,10 @@ package utilidades;
  * @author rulaa
  */
 public class VerificarPar {
+    /**
+     * Mëtodo para obtener si un número es par o impar pasandole un parametro
+     * @param num1 
+     */
     public static void parOimpar(int num1){
         
         if(num1 % 2 == 0){
