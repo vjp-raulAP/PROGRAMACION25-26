@@ -21,10 +21,11 @@ public class Comparador {
         //declaro variable donde guardaré el resultado y inicializo suponiendo que "num1" es mayor.
         int numMayor;
         numMayor = num1;
-        if(num2 > num1){
+        if(num2 > num1){ //si num2 es mayor a num1 guardo num2 en la variable numMayor
             numMayor = num2;
         }
-        if(num3 > numMayor){
+        
+        if(num3 > numMayor){ //si num3 es mayor a numMayor 
             numMayor = num3;
         }
         //introduzco return para que me devuelva resultado.
