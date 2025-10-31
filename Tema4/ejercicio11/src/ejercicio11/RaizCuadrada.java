@@ -15,8 +15,9 @@ public class RaizCuadrada {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        float num = peticionNumero();
+        float num = peticionNumero(); //llamo al método que pide número al usuario
         double raiz = raizCuadrada(num);
+        muestraResultado(num,raiz);
         
     }
     //metodo primero pedir numero que sea positivo
@@ -40,6 +41,9 @@ public class RaizCuadrada {
         raiz = Math.sqrt(raiz);
         return raiz;
     }
-    //me
+    //mostrar resultado
+    public static void muestraResultado(float num, double raiz){
+        System.out.println("La raiz cuadrada del número " + num + " es " +raiz);
+    }
     
 }
