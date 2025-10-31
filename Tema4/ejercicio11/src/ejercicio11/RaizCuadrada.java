@@ -25,7 +25,7 @@ public class RaizCuadrada {
         Scanner numeroUsuario = new Scanner(System.in);  
         float numero; //declaro la variable numero que uso para el return
         
-        do {
+        do {   //bucle do-while para que me pida el numero positivo mientras sea menor de 0
             System.out.println("Introduzca un numero positivo. ");
             numero = numeroUsuario.nextFloat();
             if (numero < 0) {
@@ -38,6 +38,7 @@ public class RaizCuadrada {
     
     //metodo para calculo  de raiz
     public static double raizCuadrada(double raiz){
+        
         raiz = Math.sqrt(raiz);
         return raiz;
     }
