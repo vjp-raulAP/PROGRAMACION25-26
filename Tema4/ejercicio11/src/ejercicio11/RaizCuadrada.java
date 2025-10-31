@@ -16,14 +16,14 @@ public class RaizCuadrada {
      */
     public static void main(String[] args) {
         float num = peticionNumero(); //llamo al método que pide número al usuario
-        double raiz = raizCuadrada(num);
-        muestraResultado(num,raiz);
+        double raiz = raizCuadrada(num);//llamo al metodo raiz para realizar el cálculo pasandole el parametro.
+        muestraResultado(num,raiz); //llamo al metodo para que me muestre el resutlado.
         
     }
     //metodo primero pedir numero que sea positivo
     public static float peticionNumero(){
-        Scanner numeroUsuario = new Scanner(System.in);
-        float numero;
+        Scanner numeroUsuario = new Scanner(System.in);  
+        float numero; //declaro la variable numero que uso para el return
         
         do {
             System.out.println("Introduzca un numero positivo. ");
@@ -41,7 +41,7 @@ public class RaizCuadrada {
         raiz = Math.sqrt(raiz);
         return raiz;
     }
-    //mostrar resultado
+    //mostrar resultado uso void porque no va a retornar nada. 
     public static void muestraResultado(float num, double raiz){
         System.out.println("La raiz cuadrada del número " + num + " es " +raiz);
     }
