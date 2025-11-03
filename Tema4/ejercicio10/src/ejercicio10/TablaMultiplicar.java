@@ -7,9 +7,14 @@ package ejercicio10;
 /**
  *
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  * @author rulaa
  */
 import java.util.Scanner;
+=======
+ * @author alumno
+ */
+>>>>>>> Stashed changes
 =======
  * @author alumno
  */
@@ -20,6 +25,7 @@ public class TablaMultiplicar {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         
         int num = pedirNumero();
@@ -47,6 +53,11 @@ public class TablaMultiplicar {
         numeroTabla = entradaUsuario.nextInt();
         return numeroTabla;
     }
+=======
+        // TODO code application logic here
+    }
+    
+>>>>>>> Stashed changes
 =======
         // TODO code application logic here
     }
