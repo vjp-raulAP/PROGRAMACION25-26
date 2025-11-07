@@ -47,7 +47,15 @@ public class Calculadora {
      * @return la división de los dos números
      */
     public static int division(int num1 ,int num2){
-        return num1/num2;
+        int resultado;
+         try{
+            resultado = num1/num2;
+        }
+        catch(ArithmeticException e){
+            resultado = 0;
+        }
+           
+        return resultado;
     }
     
     //
