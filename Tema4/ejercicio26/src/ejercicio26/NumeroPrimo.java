@@ -11,15 +11,22 @@ package ejercicio26;
 import java.util.Scanner;
 public class NumeroPrimo {
     
-    
+    /**
+     * Método para pedir un número al usuario 
+     * @return nos devuelve el número elegido por el usuario
+     */
     public static int numeroUsuario(){
         int numUsuario;
-        Scanner entrada =  new Scanner (System.in);
+        Scanner entrada =  new Scanner (System.in); //creo el objeto Scanner para pedir el número
         System.out.println("Por fvor, introduzca un número. ");
         numUsuario = entrada.nextInt();
         return numUsuario;
     }
-    
+    /**
+     * Creo método para calcular si es primo o no el número que pasamos por parámetro d
+     * @param numeroUsuario
+     * @return 
+     */
     public static boolean esPrimo(int numeroUsuario){
         boolean esPrimo = true;
         //Condicionate en el que los números menor a 1 no son primos
