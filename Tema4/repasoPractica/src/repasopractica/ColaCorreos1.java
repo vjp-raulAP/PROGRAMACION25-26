@@ -11,7 +11,7 @@ package repasopractica;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 import java.util.Random;
-public class ColaCarniceria {
+public class ColaCorreos1 {
 
     /**
      * @param args the command line arguments
@@ -38,7 +38,7 @@ public class ColaCarniceria {
        
     }
     /**
-     * Metodo pedir una opcion al usuario con objete Scanner y control de excepciones
+     * .
      * @return nos devuelve la opcion del usuario
      */
     public static int pedirOpcion(){
