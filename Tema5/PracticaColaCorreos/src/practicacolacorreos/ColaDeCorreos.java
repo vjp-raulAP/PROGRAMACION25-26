@@ -30,10 +30,13 @@ public class ColaDeCorreos {
     
     //3. SUBPROGRAMAS
     
+    /**
+     * Método que nos muestra el menu.
+     */
     public static void mostrarMenu(){
         System.out.println("------MENU CORREOS ----");
         System.out.println("1. Enviar");
-        System.out.println("2.Recoger");
+        System.out.println("2. Recoger");
         System.out.println("3. Salir");
 
     } 
