@@ -16,11 +16,56 @@ public class Bicicleta {
     private String pedales;
     private String frenos;
     private boolean estarPedaleando;
-    //Atributo estático que pertenace a la clase.
+    //Atributo estático que pertenace a la clase. 
     private static int numBicicletas = 0;
-
-    //Constructores
-    public Bicicleta() {
+    
+    
+    //1.3 ATRIBUTO DE OTRA CLASE.
+    
+    
+   public class Ciclista{
+       
+   
+         private String nombre;
+        private int dorsal;
+        private String tipo;
+        //constructores
+        public Ciclista (){
+            this.nombre= "";
+             this.dorsal = 0;
+             this.tipo = "";
+        }
+        public Ciclista(String  nombre, int dorsal, String tipo){
+            this.nombre= nombre;
+            this.dorsal= dorsal;
+            this.tipo=tipo;
+        }
+        
+        //GETTER Y SETTER
+        public String getNombre(){
+            return this.nombre;
+        }
+        public void setNombre(String Nombre){
+            this.nombre = nombre;
+        }
+        public int getDorsal(){
+            return this.dorsal;
+        }
+        public void setDorsal(int dorsal){
+            this.dorsal = dorsal;
+        }
+        public String getTipo(){
+            return this.tipo;
+        }
+        public void setTipo(int String){
+            this.tipo=tipo;
+        }
+        
+   }
+   
+        
+        //Constructores
+        public Bicicleta() {
         this.ruedas = 0;
         this.pedales = "";
         this.manillar = "";
@@ -31,6 +76,9 @@ public class Bicicleta {
         //incrementamos el valor del atributo estático
          incrementarNumBicicletas();
     }
+        
+        //1.3 inicializamos un ciclista por defecto.
+        private Ciclista ciclista;
 
     public Bicicleta(int ruedas, String manillar, String pedales, String frenos, boolean estarPedaleando) {
         this.ruedas = ruedas;
@@ -42,6 +90,7 @@ public class Bicicleta {
         //Incrementamos el valor del atributo estático
        incrementarNumBicicletas();
     }
+   
 
     //Getter y setter
     public void setRuedas(int ruedas) {
@@ -93,6 +142,8 @@ public class Bicicleta {
     private void acelerar() {
         System.out.println("Acelerando .....");
     }
+    
+    //Metodo estatico 
     private static void incrementarNumBicicletas(){
         numBicicletas++;
     }

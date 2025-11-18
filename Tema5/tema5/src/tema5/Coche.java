@@ -15,6 +15,7 @@ public class Coche {
     private int espejos;
     
     
+    
     //2. constructores. permiten crear o instanciar objeto de este tipo
     //inicializar todos los atributos.
         //2.1 constructor por defecto
