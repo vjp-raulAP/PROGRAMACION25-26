@@ -15,13 +15,15 @@ public class Test {
     public static void main(String[] args) {
         
     
-     
+        //creo un objeto curso 1
         Curso curso1 = new Curso();
          curso1.setNombre("Programación");
          curso1.setNumeroHoras(120);
+         //creo un objeto curso 2
         Curso curso2 = new Curso();
          curso2.setNombre("Base de datos");
          curso2.setNumeroHoras(80);
+         //creo un objeto curso 3
         Curso curso3 = new Curso();
          curso3.setNombre("Inglés");
          curso3.setNumeroHoras(20);
@@ -31,7 +33,9 @@ public class Test {
         System.out.println(curso3);
         // Mostrar número de cursos creados
         System.out.println("Cursos creados: " + Curso.verNumeroCursos());
+        //Sumo 4 cursos mas de manera manual. 
         Curso.sumarCursos(4);
+        //Compruebo numero de curso.
          System.out.println("Cursos creados: " + Curso.verNumeroCursos());
     }
 }

@@ -52,7 +52,10 @@ public class Curso {
           private static void incrementarNumeroCurso(){
               numeroDeCursos ++;
           }
-             
+          /**
+           * Metodo cpara sumar Cursos de manera manual
+           * @param numCursos  no retorna la suma de los numeros que se summaran al atributo numeroDeCursos.
+           */
           public static void sumarCursos(int numCursos){
               if(numCursos > 0){
                   numeroDeCursos = numeroDeCursos + numCursos;
