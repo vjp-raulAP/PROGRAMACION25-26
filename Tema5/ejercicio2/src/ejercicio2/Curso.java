@@ -10,23 +10,24 @@ package ejercicio2;
  */
 public class Curso {
     
-    //1 Atributos
+    //1 Atributos privados. 
     private String nombre;
     private int numeroHoras;
-    private static int numeroDeCursos;
+    //Creo el atributo estático qu epertenece a la clase.
+    private static int numeroDeCursos = 0;
     
     // 2 contructores 
         //2.1   
         public Curso(){
             this.nombre="";
             this.numeroHoras = 0;
-            this.numeroDeCursos = 0;
+            incrementarNumeroCurso();
          }
           //2.2 constructor parametrizado
-        public Curso(String nombre, int numeroHoras,int numeroDeCusos){
+        public Curso(String nombre, int numeroHoras){
             this.nombre = nombre;
             this.numeroHoras = numeroHoras;
-            this.numeroDeCursos =numeroDeCursos; 
+           incrementarNumeroCurso();
         }
         
       //3 Getter y setter
@@ -40,29 +41,34 @@ public class Curso {
           public int getNumeroHoras(){
               return this.numeroHoras;
           }
-          public void setNumeroHoras(){
+          public void setNumeroHoras(int numeroHoras){
               this.numeroHoras = numeroHoras;
           }
           
-          public int getNumeroDeCursos(){
-              return this.numeroDeCursos;
-                 
-          }
-          public void setNumeroDeCursos(int numeroDeCursos){
-              this.numeroDeCursos = numeroDeCursos;
-          }
-          //4 métodos
+        
+          //4 métodos statico para para sumar cursos y ver numero de cursos
+          //metodo privado solo debe usarse dentro de la clase para crear instancias.
           
+          private static void incrementarNumeroCurso(){
+              numeroDeCursos ++;
+          }
+             
+          public static void sumarCursos(int numCursos){
+              if(numCursos > 0){
+                  numeroDeCursos = numeroDeCursos + numCursos;
+              }
+          }
+           public static int verNumeroCursos() {
+           return numeroDeCursos;
+         }
           
           //to String
-          
+             @Override
+            public String toString() {
+                return "Curso con nombre = " + this.nombre + " Numero de horas = " + this.numeroHoras + " }";
+            }
     
     
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    
     
 }
