@@ -23,7 +23,11 @@ public class Pajarito {
         nuevoPajaro();
     }
 
-    // Ahora este método usa return
+    public static void muestraPajaro(){
+        System.out.println("El numero de objetos creados es de: " +numpajaros);
+    }
+    
+    //El método “muestraPajaros” contenga la sentencia return.
     static int muestraPajaros() {
         return numpajaros;
     }

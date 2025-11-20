@@ -8,6 +8,7 @@ package ejercicio4pajarito;
  *
  * @author rulaa
  */
+
 public class main {
     public static void main(String[] args) {
         Pajarito pajarito1 = new Pajarito();
