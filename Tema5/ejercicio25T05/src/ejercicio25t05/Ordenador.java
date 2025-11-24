@@ -77,15 +77,17 @@ public class Ordenador {
           this.precio=precio;
       }
       
-      //metodos para mostrar informacion
-      public String mostrar(){
+      //metodos 
+      
+      
+       //toString
+       @Override
+      public String toString(){
           return "RAM: "+ram+"GB, Disco: "+disco+"GB, Procesador: "+procesador+", Gráfica: "+grafica+", Precio: "+precio+"€";
       }
       
-      //toString
-      @Override
-      public String toString(){
-          return mostrar();
-      }
+     
+     
+      
       
 }

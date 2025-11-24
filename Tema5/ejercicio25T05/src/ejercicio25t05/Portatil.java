@@ -25,10 +25,10 @@ public class Portatil extends Ordenador {
     }
     
     public Portatil(int ram, int disco, String procesador, String grafica, double precio,
-                    String marca, double tamañoPantalla, double peso) {
+                    String marca, double tamanoPantalla, double peso) {
         super(ram, disco, procesador, grafica, precio);
         this.marca = marca;
-        this.tamanoPantalla = tamañoPantalla;
+        this.tamanoPantalla = tamanoPantalla;
         this.peso = peso;
     }
     
@@ -36,10 +36,10 @@ public class Portatil extends Ordenador {
     public String getMarca() { return marca; }
     public void setMarca(String marca) { this.marca = marca; }
 
-    public double getTamañoPantalla() { 
+    public double getTamanoPantalla() { 
         return tamanoPantalla; 
     }
-    public void setTamañoPantalla(double tamañoPantalla) {
+    public void setTamanoPantalla(double tamañoPantalla) {
         this.tamanoPantalla = tamañoPantalla; 
     }
 
@@ -50,15 +50,12 @@ public class Portatil extends Ordenador {
         this.peso = peso;
     }
 
-    @Override
-    public String mostrar() {
-        return "Portátil (" + super.mostrar() + ", Marca: " + marca + ", Pantalla: " +
-                tamanoPantalla + " pulgadas, Peso: " + peso + " kg)";
-    }
+    
 
     @Override
     public String toString() {
-        return mostrar();
+        return "Portátil (" + super.toString() + ", Marca: " + marca + ", Pantalla: " +
+                tamanoPantalla + " pulgadas, Peso: " + peso + " kg)";
     }
     
 }

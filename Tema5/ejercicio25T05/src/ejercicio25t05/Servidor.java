@@ -53,7 +53,7 @@ public class Servidor extends Ordenador {
     }
     //metodo para mostrar la informacion
     public String mostrar(){
-        return "Servidor (" + super.mostrar() + ", Monitor: " + tamanoMonitor + " pulgadas, Teclado: " + teclado +
+        return "Servidor (" + super.toString() + ", Monitor: " + tamanoMonitor + " pulgadas, Teclado: " + teclado +
                 ", Ratón: " + raton + ")]";
         
     }
