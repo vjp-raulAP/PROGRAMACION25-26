@@ -17,7 +17,7 @@ public class Alumno {
     //2. constructor por defecto
     public Alumno(){
         this.nombre= "";
-        //this.nota = 0;
+        this.nota = 0;
     }
     
     //2.1 constructor parametrizado

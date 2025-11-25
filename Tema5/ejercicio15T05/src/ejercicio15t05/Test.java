@@ -25,8 +25,8 @@ public class Test {
         //el ejercicio pide crear 3 empleados
         
         Empleado emp1 = new Empleado("Raul Albalat ",1500,dir1);
-        Empleado emp2 = new Empleado("Raul Albalat ",1500,dir2);
-        Empleado emp3 = new Empleado("Raul Albalat ",1500,dir3);
+        Empleado emp2 = new Empleado("aitor Perez ",1500,dir2);
+        Empleado emp3 = new Empleado("Oscar Sanchez ",1500,dir3);
         
         
         //imprimo resultados de los 3 empleados.

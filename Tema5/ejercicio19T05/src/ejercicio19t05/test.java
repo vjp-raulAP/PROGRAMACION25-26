@@ -9,7 +9,7 @@ package ejercicio19t05;
  * @author rulaa
  */
 import java.util.Scanner;
-public class test {
+public class Test {
 
     //metodo introducir usuario
     public static  String pedirNombre(){

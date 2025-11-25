@@ -54,13 +54,13 @@ public class Empleado {
      
      //metodos
      //metodo para el calculo del salario  (tarifa normal = 40h y  tarifaextra(>40h) = tarifanormal + (tarifanormal/2)
-      //lo creo en la clase test
+      //lo creo en la clase Test
      
      
      
      //toString
      @Override
      public String toString(){
-         return (this.nombre + " trajabó "+this.horas+ " horas, cobra "+this.tarifa+" euros la hora por lo que le corrsponde un sueldo de "+ test.CalculoTarifaTotal(this.tarifa,this.horas)+"euros");
+         return (this.nombre + " trajabó "+this.horas+ " horas, cobra "+this.tarifa+" euros la hora por lo que le corrsponde un sueldo de "+ Test.CalculoTarifaTotal(this.tarifa,this.horas)+"euros");
     }
 }
