@@ -51,16 +51,16 @@ public class Servidor extends Ordenador {
     public void setRaton(String raton){
         this.raton=raton;
     }
-    //metodo para mostrar la informacion
-    public String mostrar(){
-        return "Servidor (" + super.toString() + ", Monitor: " + tamanoMonitor + " pulgadas, Teclado: " + teclado +
-                ", Ratón: " + raton + ")]";
-        
-    }
+    //metodos 
+  
+
+   
+    //to string
     
    @Override
     public String toString() {
-        return mostrar();
+         return "Servidor (" + super.toString() + ", Monitor: " + tamanoMonitor + " pulgadas, Teclado: " + teclado +
+                ", Ratón: " + raton + ")]";
     }
     
     

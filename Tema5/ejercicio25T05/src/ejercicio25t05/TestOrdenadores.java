@@ -63,7 +63,7 @@ public class TestOrdenadores {
             System.out.println("Introduce el tamaño del monitor para " + nombrePC + ". Debe ser mayor a 14 pulgadas: ");
             monitor = entrada.nextInt();
             if (monitor <= 14) {
-                System.out.println("❌ ERROR: " + monitor + " pulgadas no es válido.");
+                System.out.println(" ERROR: " + monitor + " pulgadas no es válido.");
                 System.out.println("   El monitor debe ser mayor a 14 pulgadas. Inténtalo de nuevo.");
             }
         } while (monitor <= 14);
