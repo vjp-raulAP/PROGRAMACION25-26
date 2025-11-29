@@ -8,6 +8,29 @@ package ejercicio4t06;
  *
  * @author alumno
  */
-public class Lobo {
+public class Lobo extends Canidos {
+    public Lobo(){
+        super();
+    }
     
+    public Lobo (String nombre,int edad, int peso){
+      super(nombre,edad,peso);  
+    }
+    
+    @Override
+    public void mostrarSonido(){
+        System.out.println("Aullido");
+    }
+    @Override
+    public void mostrarAlimentacion(){
+        System.out.println("Carnivoro");
+    }
+    @Override
+    public void mostrarHabitat(){
+        System.out.println("Bosque");
+    }
+    @Override
+    public void mostrarNombreCientifico(){
+        System.out.println("Canis lupus");
+    }
 }
