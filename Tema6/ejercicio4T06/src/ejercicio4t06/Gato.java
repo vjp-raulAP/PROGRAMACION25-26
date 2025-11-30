@@ -8,21 +8,22 @@ package ejercicio4t06;
  *
  * @author rulaa
  */
-public class Perro extends Canidos {
-    public Perro (){
+public class Gato extends Felinos {
+    
+    public Gato (){
         super();
     }
-    public Perro (String nombre,int edad, int peso){
+    public Gato(String nombre,int edad, int peso){
         super(nombre,edad,peso);
     }
     
     @Override
     public void mostrarSonido(){
-        System.out.println("Ladrido");
+        System.out.println("Maullido");
     }
     @Override
     public void mostrarAlimentacion(){
-        System.out.println("Carnívora");
+        System.out.println("ratones");
     }
     @Override
     public void mostrarHabitat(){
@@ -30,10 +31,16 @@ public class Perro extends Canidos {
     }
     @Override
     public void mostrarNombreCientifico(){
-        System.out.println("Canis lupus familiaris");
+        System.out.println("Felis silvestris catus");
     }
     
-        
-        
+    @Override
+    public String toString() {
+        mostrarSonido();
+        mostrarAlimentacion();
+        mostrarHabitat();
+        mostrarNombreCientifico();
 
+         return "Nombre: " + getNombre() + ", Edad: " + getEdad()+", Peso: " + getPeso();
+    }
 }

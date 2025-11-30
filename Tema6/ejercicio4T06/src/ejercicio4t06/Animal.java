@@ -67,8 +67,20 @@ public abstract class Animal {
     
     // Método común para mostrar la información completa
  
-    @Override
-    public String toString(){
-        return "Animal"+ nombre;
+   // Método para mostrar info
+    public void mostrarInfo() {
+        
+        System.out.print("Nombre Científico: ");
+        mostrarNombreCientifico();
+        System.out.println("Nombre: " + nombre );
+        System.out.println("Edad: " + edad + " años");
+        System.out.println("Peso: " + peso + " kg");
+        System.out.print("Sonido: " );
+        mostrarSonido();
+        System.out.print("Alimentación: ");
+        mostrarAlimentacion();
+        System.out.print("Hábitat: " );
+        mostrarHabitat();
+        System.out.println("------------------------------------------------");
     }
 }

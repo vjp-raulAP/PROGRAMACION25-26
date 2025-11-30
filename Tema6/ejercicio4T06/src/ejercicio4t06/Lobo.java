@@ -33,4 +33,5 @@ public class Lobo extends Canidos {
     public void mostrarNombreCientifico(){
         System.out.println("Canis lupus");
     }
+   
 }

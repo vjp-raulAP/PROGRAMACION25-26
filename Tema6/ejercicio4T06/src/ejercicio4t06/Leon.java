@@ -8,6 +8,32 @@ package ejercicio4t06;
  *
  * @author rulaa
  */
-public class Leon {
+public class Leon extends Felinos {
+    public Leon (){
+        super();
+    }
+    public Leon(String nombre, int edad, int peso){
+        super(nombre, edad, peso);
+    }
+    
+     @Override
+    public void mostrarSonido(){
+        System.out.println("Rugido");
+    }
+    @Override
+    public void mostrarAlimentacion(){
+        System.out.println("Carnívora");
+    }
+    @Override
+    public void mostrarHabitat(){
+        System.out.println("Sabana");
+    }
+    @Override
+    public void mostrarNombreCientifico(){
+        System.out.println("Panthera leo");
+    }
+    
+   
+    
     
 }

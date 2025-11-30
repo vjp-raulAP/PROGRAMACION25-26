@@ -39,12 +39,7 @@ public class Canidos extends Animal {
         System.out.println("Familia Canidae.");
     }
 
-    @Override
-    public String toString() {
-        return "Cánido: " + getNombre() +
-               ", Edad: " + getEdad() +
-               ", Peso: " + getPeso();
-    }
+   
 }
 
 

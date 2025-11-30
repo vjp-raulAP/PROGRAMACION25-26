@@ -39,9 +39,12 @@ public class  Felinos extends Animal {
 
     @Override
     public String toString() {
-        return "Felino: " + getNombre() +
-               ", Edad: " + getEdad() +
-               ", Peso: " + getPeso();
+        mostrarSonido();
+        mostrarAlimentacion();
+        mostrarHabitat();
+        mostrarNombreCientifico();
+
+        return "Nombre: " + getNombre() + ", Edad: " + getEdad()+", Peso: " + getPeso();
     }
     
     
