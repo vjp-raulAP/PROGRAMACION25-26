@@ -30,13 +30,13 @@ public class Test {
         System.out.println("--- PERRO ---");
         perro1.mostrarInfo();
         
-        System.out.println("\n--- LOBO ---");
+        System.out.println("--- LOBO ---");
         lobo1.mostrarInfo();
         
-        System.out.println("\n--- LEÓN ---");
+        System.out.println("--- LEÓN ---");
         leon1.mostrarInfo();
         
-        System.out.println("\n--- GATO ---");
+        System.out.println("--- GATO ---");
         gato1.mostrarInfo();
         
         //con POLIMORFISMO (Referencia de Superclase)
