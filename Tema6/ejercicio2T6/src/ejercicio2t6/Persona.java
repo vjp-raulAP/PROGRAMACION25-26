@@ -34,7 +34,7 @@ public abstract class Persona {
     }
      
     //metodos
-    public abstract void saludar();
+    public abstract String saludar();
     
     
     @Override

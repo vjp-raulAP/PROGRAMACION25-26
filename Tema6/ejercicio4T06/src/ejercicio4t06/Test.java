@@ -29,16 +29,7 @@ public class Test {
         
         System.out.println("--- PERRO ---");
         perro1.mostrarInfo();
-        
-<<<<<<< Updated upstream
-        System.out.println("--- LOBO ---");
-        lobo1.mostrarInfo();
-        
-        System.out.println("--- LEÓN ---");
-        leon1.mostrarInfo();
-        
-        System.out.println("--- GATO ---");
-=======
+
         System.out.println("\n--- LOBO ---");
         lobo1.mostrarInfo();
         
@@ -46,7 +37,7 @@ public class Test {
         leon1.mostrarInfo();
         
         System.out.println("\n--- GATO ---");
->>>>>>> Stashed changes
+
         gato1.mostrarInfo();
         
         //con POLIMORFISMO (Referencia de Superclase)
