@@ -8,7 +8,7 @@ package ejercicio5t6;
  *
  * @author alumno
  */
-public class Mamifero {
+public abstract class Mamifero {
     //Atributos
     private String nombre;
     private String sexo;
@@ -30,6 +30,39 @@ public class Mamifero {
            this.color=color;
            this.edad = edad;
        }
+       
+       //getter y setter
+       
+       public String getNombre(){
+           return nombre;
+       }
+       
+       public void setNombtre(String nombre){
+           this.nombre = nombre;
+       }
+       
+       public String getSexo(){
+           return sexo;
+           
+       }
+       public void setSexo(String sexo){
+           this.sexo = sexo;
+       }
+       public String getColor(){
+           return color;
+       }
+       public void setColor(String color){
+           this.color = color;
+       }
+       
+       public int edad(){
+           return edad;
+       }
+       
+       public void edad(int edad){
+           this.edad = edad;
+       }
+       
        
     
        
