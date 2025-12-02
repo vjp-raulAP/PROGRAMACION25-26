@@ -39,7 +39,10 @@ public class Canidos extends Animal {
         System.out.println("Familia Canidae.");
     }
 
+<<<<<<< Updated upstream
    
+=======
+>>>>>>> Stashed changes
 }
 
 

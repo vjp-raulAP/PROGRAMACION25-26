@@ -9,6 +9,7 @@ package ejercicio4t06;
  * @author alumno
  */
 public class Lobo extends Canidos {
+<<<<<<< Updated upstream
     public Lobo(){
         super();
     }
@@ -16,6 +17,17 @@ public class Lobo extends Canidos {
     public Lobo (String nombre,int edad, int peso){
       super(nombre,edad,peso);  
     }
+=======
+
+    
+    public Lobo(){
+        super();
+    }
+    public Lobo(String nombre,int edad,int peso){
+        super(nombre,edad,peso);
+    }
+    
+>>>>>>> Stashed changes
     
     @Override
     public void mostrarSonido(){
