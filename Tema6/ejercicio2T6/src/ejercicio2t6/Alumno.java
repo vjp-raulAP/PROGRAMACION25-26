@@ -21,4 +21,17 @@ public class Alumno extends Persona {
         super(nombre);
         this.grupo = grupo;
     }
+    //Getter y setter
+    
+    public String getGrupo(){
+        return grupo;
+    }
+    public void setGrupo(String grupo){
+        this.grupo = grupo;
+    }
+    
+    @Override
+    public String saludar(){
+        return"Hola, soy el alumno " + getNombre() + " y estoy en el grupo " + grupo;
+    }
 }
