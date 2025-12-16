@@ -38,12 +38,8 @@ public class Canidos extends Animal {
     public void mostrarNombreCientifico() {
         System.out.println("Familia Canidae.");
     }
-
-<<<<<<< Updated upstream
-   
-=======
->>>>>>> Stashed changes
 }
+
 
 
     
