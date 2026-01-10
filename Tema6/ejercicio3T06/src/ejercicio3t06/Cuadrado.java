@@ -46,6 +46,6 @@ public class Cuadrado extends FiguraGeometrica {
     
      @Override
      public String toString(){
-         return "el cuadrado tiene color ="+getColor()+" , lado = "+lado;
+         return "el cuadrado tiene color ="+getColor()+" , lado = "+lado + "El area del cuadrado es ";
      }
 }
