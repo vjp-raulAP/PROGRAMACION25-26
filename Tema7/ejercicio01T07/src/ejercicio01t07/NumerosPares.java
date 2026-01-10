@@ -27,9 +27,13 @@ public class NumerosPares {
         }
         return numArray;
     }
+    /**
+     * Metodo en el que muestra los numeros pares del array pasando el array
+     * @param numerosArray 
+     */
     
     public static void numerosPares(int[] numerosArray ){
-        int i;
+        int i; //declaro la variable i que usare para el bucle for
         System.out.println("Los números pares del array son: ");
         for ( i = 0; i < numerosArray.length; i++) {
             if (numerosArray[i] % 2 == 0){
