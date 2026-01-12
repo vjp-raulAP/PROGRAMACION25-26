@@ -24,7 +24,7 @@ public class TrianguloRectangulo extends Triangulo {
     
     //metodos 
     
-    
+    s
     
     //metodo de calculo de 
    public void tipoTriangulo() {

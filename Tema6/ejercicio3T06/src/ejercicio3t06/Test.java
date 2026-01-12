@@ -17,22 +17,25 @@ public class Test {
         
         
          // Crear objetos de cada figura
-        Circulo c = new Circulo("Rojo",5);
-        Rectangulo r = new Rectangulo("Azul",4, 6);
-        Cuadrado q = new Cuadrado("Verde",3 );
-        TrianguloRectangulo t = new TrianguloRectangulo(3, 4);
+        Circulo circulo1 = new Circulo("Rojo",5);
+        Rectangulo rectangulo1 = new Rectangulo("Azul",4, 6);
+        Cuadrado cuadrado1 = new Cuadrado("Verde",3 );
+        TrianguloRectangulo trianguloR1 = new TrianguloRectangulo(3, 4);
         
          // Mostrar información usando toString
-        System.out.println(c);
-        c.calcularPerimetro();
-        System.out.println(r);
-        System.out.println(q);
-        System.out.println(t);
+        System.out.println(circulo1);
+        circulo1.calcularPerimetro();
+        System.out.println(cuadrado1);
+        System.out.println( trianguloR1);
+        System.out.println(rectangulo1 );
         
         
         TrianguloRectangulo triangulo1 = new TrianguloRectangulo(4,4);
         triangulo1.tipoTriangulo();        // Calcula e imprime el tipo
         System.out.println(triangulo1);    // Muestra todo, incluyendo el tipo
+        
+        
+        
     }
     
 }
