@@ -34,24 +34,25 @@ public class IntercambioNumeros {
 
         return numArray;
     }
-     
+
     /**
-     * Metodo intercambio de numeros del array  entre los indices 2 y 4
-     * @param numerosArray 
+     * Metodo intercambio de numeros del array entre los indices 2 y 4
+     *
+     * @param numerosArray
      */
-    public static void intercambioNumeros(int[] numerosArray){
+    public static void intercambioNumeros(int[] numerosArray) {
         int aux = numerosArray[1];
-        numerosArray[1]=numerosArray[3];
-        numerosArray[3]=aux;
+        numerosArray[1] = numerosArray[3];
+        numerosArray[3] = aux;
     }
-    
-    public static void verArray(int[] numerosArray){
+
+    public static void verArray(int[] numerosArray) {
         System.out.println("Los numeros del array son: ");
-        for( int num : numerosArray){
+        for (int num : numerosArray) {
             System.out.println(num);
         }
     }
-    
+
 
 
 
