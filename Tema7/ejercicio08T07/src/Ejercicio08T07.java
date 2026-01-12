@@ -12,14 +12,14 @@ import java.util.Scanner;
  */
 public class Ejercicio08T07 {
 
-// Método que pide el número al usuario
+    // Método que pide el número al usuario
     public static int pedirNumero() {
-        Scanner sc = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         int numeroUsuario;
 
         do {
             System.out.print("Introduzca un número entero de 5 cifras: ");
-            numeroUsuario = sc.nextInt();
+            numeroUsuario = entrada.nextInt();
         } while (numeroUsuario < 10000 || numeroUsuario > 99999);
 
         return numeroUsuario;
@@ -39,24 +39,17 @@ public class Ejercicio08T07 {
 
     // Método que muestra el número al revés
     public static void mostrarAlReves(int[] cifras) {
-        System.out.print("El numero introducido escrito al revés es el: ");
-
+        System.out.print("El número introducido escrito al revés es: ");
         for (int i = 0; i < cifras.length; i++) {
             System.out.print(cifras[i]);
         }
-
         System.out.println();
     }
-}
 
-
-     
-    
-    /**
-     * @param args the command line arguments
-     */
+    // Método principal
     public static void main(String[] args) {
-       
+        int numero = pedirNumero();
+        int[] cifras = dividirEnCifras(numero);
+        mostrarAlReves(cifras);
     }
-    
-
+}
