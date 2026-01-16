@@ -55,7 +55,7 @@ public class Ejercicio18T07 {
          
          int[] arrayResultado = arrayUnidos(array1, array2);
          int i;
-         System.out.println("el resultado es: ");
+         System.out.println("El resultado es: ");
          for ( i = 0; i < arrayResultado.length; i++) {
              System.out.print(arrayResultado[i]+ " ");
         }
