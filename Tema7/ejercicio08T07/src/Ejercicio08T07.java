@@ -29,7 +29,7 @@ public class Ejercicio08T07 {
     public static int[] dividirEnCifras(int numero) {
         int[] cifras = new int[5];
         for (int i = 0; i < cifras.length; i++) {
-            cifras[i] = numero % 10;
+            cifras[i] = numero % 10;  //hago el modulo de tal manera que si  divido x ejemplo 12345, me quedari con el 5 y  numero /10 =1234;  vuelvo a iterar con 1234. 
             numero /= 10;
         }
 
