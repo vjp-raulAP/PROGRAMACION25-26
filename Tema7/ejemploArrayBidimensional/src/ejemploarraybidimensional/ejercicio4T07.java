@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author alumno
  */
-public class EjemploArrayBidimensional {
+public class ejercicio4T07 {
 
     
     public static int [][] rellenarArray(){
@@ -23,8 +23,10 @@ public class EjemploArrayBidimensional {
             for (int j = 0; j < arrayBi[i].length; j++) {
 
                 arrayBi[i][j] = (int) (Math.random() * (201 - 100)) + 100;
+                System.out.print(arrayBi[i][j] + " ");
             }
         }
+        
           return arrayBi;      
     }
 
@@ -35,8 +37,11 @@ public class EjemploArrayBidimensional {
                 if (array[i][j] % 2 == 0) {
                     System.out.print(array[i][j] + " ");
                 }
+               
             }
+          
         }
+        
     }
         
             /**
