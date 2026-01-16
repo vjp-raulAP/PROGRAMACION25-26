@@ -49,9 +49,7 @@ public class Ejercicio15T07 {
                 opcion = -1;
                 
             }
-             
   
-            
            
             switch (opcion) {
 
@@ -81,7 +79,7 @@ public class Ejercicio15T07 {
                 case 4:
                     int suma = 0;
                     for (i = 0; i < ventas.length; i++) {
-                        suma += ventas[i];
+                        suma += ventas[i];  //suma total de ventas
                     }
                     System.out.println("Ventas totales del año: " + suma);
                     System.out.println("--------------------------------------------");
@@ -89,8 +87,8 @@ public class Ejercicio15T07 {
 
                 case 5:
                     int sumaPares = 0;
-                    for ( i = 1; i < ventas.length; i += 2) {
-                        sumaPares += ventas[i];
+                    for ( i = 1; i < ventas.length; i += 2) { //recorre el bucle en los indices pares
+                        sumaPares = sumaPares+ventas[i];
                     }
                     System.out.println("Ventas de los meses pares: " + sumaPares);
                     System.out.println("--------------------------------------------");
@@ -100,8 +98,8 @@ public class Ejercicio15T07 {
                     int mayorVenta = ventas[0];
                     int mesMayor = 0;
 
-                    for ( i = 1; i < ventas.length; i++) {
-                        if (ventas[i] > mayorVenta) {
+                    for ( i = 1; i < ventas.length; i++) { 
+                        if (ventas[i] > mayorVenta) {  //recorre ventas y si es mayor a lo guardo en la variable mayorventa. y guardo su indice
                             mayorVenta = ventas[i];
                             mesMayor = i;
                         }
