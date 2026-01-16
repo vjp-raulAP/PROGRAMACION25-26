@@ -28,7 +28,6 @@ public class Ejercicio08T07 {
     // Método que divide el número en cifras y las guarda en un array
     public static int[] dividirEnCifras(int numero) {
         int[] cifras = new int[5];
-
         for (int i = 0; i < cifras.length; i++) {
             cifras[i] = numero % 10;
             numero /= 10;
