@@ -71,7 +71,7 @@ public class Ejercicio14T07 {
                         }
                     }
                     break;
-                case 3:
+                    case 3:
                     float suma = 0;
                     float media;
                     for (int i = 0; i < temperaturas.length; i++) {
@@ -81,7 +81,8 @@ public class Ejercicio14T07 {
 
                         }
                     }
-                    media = suma / 28;
+                    media = suma / (temperaturas.length*temperaturas[0].length);   //serian las celdas de la matriz
+                    
                     System.out.println("La media de temperaturas del mes es " + media + "Grados");
 
                     break;
@@ -90,23 +91,22 @@ public class Ejercicio14T07 {
 
                     for (int i = 0; i < temperaturas.length; i++) {
                         for (int j = 0; j < temperaturas[0].length; j++) {
-                             if(temperaturas[i][j]>temperaturaMaxima ){
-                                 temperaturaMaxima = temperaturas[i][j];
-                                 
-                             }
-                                     
+                            if (temperaturas[i][j] > temperaturaMaxima) {
+                                temperaturaMaxima = temperaturas[i][j];
+
+                            }
 
                         }
                     }
-                    System.out.println("La temperatura maxima fue"+temperaturaMaxima);
+                    System.out.println("La temperatura maxima fue" + temperaturaMaxima);
                     for (int i = 0; i < temperaturas.length; i++) {
                         for (int j = 0; j < temperaturas[0].length; j++) {
-                            if(temperaturas[i][j] == temperaturaMaxima){
-                                System.out.println("latemperatura máxima se encuentra en el día"+diasSemana[j]+" del la semana "+(i+1));
+                            if (temperaturas[i][j] == temperaturaMaxima) {
+                                System.out.println("latemperatura máxima se encuentra en el día" + diasSemana[j] + " del la semana " + (i + 1));
                             }
-                            
+
                         }
-                    
+
                     }
 
                     break;

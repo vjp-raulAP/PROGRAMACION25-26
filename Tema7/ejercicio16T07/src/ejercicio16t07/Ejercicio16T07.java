@@ -5,13 +5,13 @@
 package ejercicio16t07;
 
 import java.util.Scanner;
-
+import java.util.InputMismatchException;
 /**
  *
  * @author rulaa
  */
 public class Ejercicio16T07 {
-
+   
     /**
      * @param args the command line arguments
      */
@@ -36,8 +36,14 @@ public class Ejercicio16T07 {
             System.out.println("5. Asignatura más difícil");
             System.out.println("6. Salir");
             System.out.print("Elige opción: ");
-            
-            opcion  = entrada.nextInt();
+            try {
+                 opcion  = entrada.nextInt();
+            } catch (InputMismatchException e) {
+              
+                entrada.nextLine();
+                opcion = -1;
+            }
+           
             
             switch (opcion) {
                 case 1:  //Opcion para relleno de notas  con un for anidado en otro. 
@@ -45,7 +51,7 @@ public class Ejercicio16T07 {
                         System.out.println("Alumno: " + alumnos[i]);
                         for ( j = 0; j < asignaturas.length; j++) {
                             System.out.print("Nota de " + asignaturas[j] + ": ");
-                            notas[i][j] = entrada.nextFloat();
+                           
                         }
                     }
                     break;
