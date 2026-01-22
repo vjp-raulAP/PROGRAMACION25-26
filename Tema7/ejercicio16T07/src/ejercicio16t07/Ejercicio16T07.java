@@ -5,12 +5,13 @@
 package ejercicio16t07;
 
 import java.util.Scanner;
-
+import java.util.InputMismatchException;
 /**
  *
  * @author rulaa
  */
 public class Ejercicio16T07 {
+<<<<<<< HEAD
     
       static Scanner ENTRADA = new Scanner(System.in);
 
@@ -18,9 +19,16 @@ public class Ejercicio16T07 {
     static String[] ASIGNATURAS = {"Lengua", "Mates", "Historia", "Física"};
     static float[][] NOTAS = new float[6][4];
 
+=======
+   
+    /**
+     * @param args the command line arguments
+     */
+>>>>>>> b5ab4ee0d42dd9a464f7401c2873dab62ddb785a
     public static void main(String[] args) {
 
         int opcion;
+<<<<<<< HEAD
 
         do {
             mostrarMenu();
@@ -29,6 +37,36 @@ public class Ejercicio16T07 {
             switch (opcion) {
                 case 1:
                     rellenarNotas();
+=======
+          int i , j;
+        do {            
+            System.out.println("OPCIONES ");
+            System.out.println("1. Rellenar notas");
+            System.out.println("2. Mostrar notas");
+            System.out.println("3. Mejor alumno");
+            System.out.println("4. Alumno con más suspensos");
+            System.out.println("5. Asignatura más difícil");
+            System.out.println("6. Salir");
+            System.out.print("Elige opción: ");
+            try {
+                 opcion  = entrada.nextInt();
+            } catch (InputMismatchException e) {
+              
+                entrada.nextLine();
+                opcion = -1;
+            }
+           
+            
+            switch (opcion) {
+                case 1:  //Opcion para relleno de notas  con un for anidado en otro. 
+                     for (i = 0; i < alumnos.length; i++) {
+                        System.out.println("Alumno: " + alumnos[i]);
+                        for ( j = 0; j < asignaturas.length; j++) {
+                            System.out.print("Nota de " + asignaturas[j] + ": ");
+                           
+                        }
+                    }
+>>>>>>> b5ab4ee0d42dd9a464f7401c2873dab62ddb785a
                     break;
                 case 2:
                     mostrarNotas();
