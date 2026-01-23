@@ -32,19 +32,22 @@ public class Ejercicio10T07 {
         }
     }
     
-    public static void repetidosCambiar(int [] vector){
+    
+    public static void repetidosCambiar(int [] array){
        int [] contador = new int [9];  ///creo un array contador que usare para que me cuente las veces que se repiten los numeros del vector.
        int i;
         //cuento las veces que aparece cada numero
-        for (i = 0; i < vector.length ; i++) {
-            contador[vector[i]]++;
+        for (i = 0; i < array.length ; i++) {
+            contador[array[i]]++;
         }
-        //condicional si el numero se repite, el contador sera mayor a 1
-        for (i=0; i < vector.length; i++) {
-            if(contador[vector[i]] > 1){
-                vector[i]=0;
-        }
-        }
+       // Sustituir los repetidos por 0 usando while
+        i = 0;
+        while (i < array.length) {
+            if (contador[array[i]] > 1) {
+                array[i] = 0;
+                }
+                i++;
+            }
     }
     
     
@@ -54,14 +57,14 @@ public class Ejercicio10T07 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] vector = new int[10];
-        rellenarVector(vector);
+        int[] array = new int[10];  //creo un array de 1o valores
+        rellenarVector(array);
         System.out.print("Se han generado los siguiente numeros: ");
-        mostrarVector(vector);
-        repetidosCambiar(vector);
+        mostrarVector(array);
+        repetidosCambiar(array);
         System.out.println();
         System.out.print("Sustituimos los elementos repetidos por un 0: ");
-        mostrarVector(vector);
+        mostrarVector(array);
     }
     
 }

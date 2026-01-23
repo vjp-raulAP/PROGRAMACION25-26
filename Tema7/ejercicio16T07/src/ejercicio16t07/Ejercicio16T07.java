@@ -13,11 +13,11 @@ import java.util.InputMismatchException;
 public class Ejercicio16T07 {
 
     
-      static Scanner ENTRADA = new Scanner(System.in);
+    public final static Scanner ENTRADA = new Scanner(System.in);
 
-    static String[] ALUMNOS = {"Pepe", "Juan", "Ana", "Marta", "Pedro", "María"};
-    static String[] ASIGNATURAS = {"Lengua", "Mates", "Historia", "Física"};
-    static float[][] NOTAS = new float[6][4];
+    public final  static String[] ALUMNOS = {"Pepe", "Juan", "Ana", "Marta", "Pedro", "María"};
+    public final  static String[] ASIGNATURAS = {"Lengua", "Mates", "Historia", "Física"};
+   public final  static float[][] NOTAS = new float[6][4];
 
 
    
