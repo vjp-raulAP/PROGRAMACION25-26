@@ -11,6 +11,8 @@ import java.util.Scanner;
  * @author rulaa
  */
 public class Empleado {
+    
+   
     //Atributos
     private String nombre;
     private float horasTrabajadas;
