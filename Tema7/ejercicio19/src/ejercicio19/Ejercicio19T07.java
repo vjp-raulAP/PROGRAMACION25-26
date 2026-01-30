@@ -8,7 +8,7 @@ package ejercicio19;
  *
  * @author rulaa
  */
-public class Ejercicio19 {
+public class Ejercicio19T07 {
     
  // Método para rellenar el vector con números aleatorios entre 10 y 80
     public static void rellenarVector(int[] vector) {
