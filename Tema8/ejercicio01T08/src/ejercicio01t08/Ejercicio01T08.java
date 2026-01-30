@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 public class Ejercicio01T08 {
     
- Scanner entrada = new Scanner(System.in);
+   
 
  
      
@@ -26,10 +26,10 @@ public class Ejercicio01T08 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-
+        float media ;
+        //creo array de 6 asignaturas.
        Asignatura[] asignaturas = new Asignatura[6];
-       
+       //inicializamos cada asignatura con su nombre
         asignaturas [0] = new Asignatura("Programacion");
         asignaturas[1] = new Asignatura("Lenguaje de marcas");
         asignaturas[2] = new Asignatura("Bases de datos");
@@ -37,13 +37,18 @@ public class Ejercicio01T08 {
         asignaturas[4] = new Asignatura("Sistemas informaticos");
         asignaturas[5]= new Asignatura("FOL");
        
-        //pido las notas con for each
+        //pido las notas
         
         for (int i = 0; i < asignaturas.length; i++) {
-            System.out.println("Por favor introduzca la nota para la asignatura"+asignaturas[i]+": ");
+            asignaturas[i].introducirNota();
             
         }
-            
+        
+        //calculo de media
+         media = Asignatura.calcularNotaMedia(asignaturas);
+         
+         //resultado de media
+         System.out.println("La nota media del curso es :"+media);
             
                 
         
