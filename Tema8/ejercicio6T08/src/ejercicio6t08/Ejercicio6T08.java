@@ -36,12 +36,12 @@ public class Ejercicio6T08 {
         // Pedir datos de cada empleado
         for (int i = 0; i < empleados.length; i++) {
             System.out.println("Empleado " + (i + 1));
-            empleados[i] = new Empleado();
-            empleados[i].introducirDatos();
+            empleados[i] = new Empleado(); //creamos un nuevo empleado
+            empleados[i].introducirDatos(); //recurrimos al metodo para meter los datos.
         }
         
          // Mostrar sueldos
-        System.out.println("--- SUELDOS BRUTOS ---");
+        System.out.println("------ SUELDOS BRUTOS -------");
         for (int i = 0; i < empleados.length; i++) {
             empleados[i].calcularSueldoBruto();
         }
