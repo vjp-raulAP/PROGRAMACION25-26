@@ -19,7 +19,7 @@ public class Ejercicio12T08 {
 
         for (int i = 0; i < muebles.length; i++) {
             System.out.println("Mueble " + (i + 1));
-            System.out.print("Nombre: ");
+            System.out.print("Descripcion: ");
             String nombre = entrada.next();
             System.out.print("Precio: ");
             double precio = entrada.nextDouble();
@@ -34,6 +34,7 @@ public class Ejercicio12T08 {
     
     
     public static void mostrarMuebles(Mueble[] mueble){
+        System.out.println("--- Lista muebles ---");
         for (int i = 0; i < mueble.length; i++) {
             System.out.println(mueble[i]);
         }
