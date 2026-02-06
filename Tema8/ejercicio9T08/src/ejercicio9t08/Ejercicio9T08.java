@@ -37,7 +37,7 @@ public class Ejercicio9T08 {
             entrada.nextLine();
             System.out.println(e);
         }
-        return -1;
+        return 7;
     }
     
     public static void rellenarAlumnos(Alumno[] alumnos){
@@ -47,11 +47,12 @@ public class Ejercicio9T08 {
             alumnos[i].rellenarNotas();
         }
     }
-    public static void mostrarAlumnos(Alumno [] alumnos){
-        for (Alumno alumno : alumnos){
-            System.out.println(alumno);
+    public static void mostrarAlumnos(Alumno[] alumnos) {
+        for (int i = 0; i < alumnos.length; i++) {
+            System.out.println(alumnos[i]);
         }
     }
+
     
     public static void mejorAlumno(Alumno[] alumnos){
         Alumno mejorAlumno = new Alumno();
@@ -69,11 +70,11 @@ public class Ejercicio9T08 {
    public static void asignaturaMasDificil(Alumno[] alumnos){
     float peorMedia = 10;
     int asignaturaPeor = 0;
-    
+    //recorre las asignaturas de un alumno
     for (int j = 0; j < alumnos[0].getNotas().length; j++){
         float suma = 0;
         
-        // Sumar todas las notas de esta asignatura
+        // suma total de las notas de esa asignatura
         for (int i = 0; i < alumnos.length; i++){
             suma += alumnos[i].getNotas()[j].getNota();  // ← CORREGIDO
         }
@@ -148,11 +149,11 @@ public class Ejercicio9T08 {
                     break;
                 }
                 case 6: {
-                    System.out.println("Gracias por utilizar el programa! Hasta pronto! ");
+                    System.out.println("Gracias.Hasta pronto! ");
                     break;
                 }
                 default: 
-                    System.out.println("Opción no válida. Por favor, selecciona una opción del 1 al 6");
+                    System.out.println("Opción incorrecta. Por favor, seleccione una opción del 1 al 6");
             }
         }while (opcion != 6);
     
