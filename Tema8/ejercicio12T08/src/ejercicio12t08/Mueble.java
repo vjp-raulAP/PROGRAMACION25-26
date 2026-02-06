@@ -49,7 +49,7 @@ public class Mueble {
 
     @Override
     public String toString() {
-        return "Mueble{" + "nombre=" + nombre + ", precio=" + precio + '}';
+        return "Mueble {" + "Nombre = " + nombre + ", precio=" + precio + " euros } ";
     }
     
 } 

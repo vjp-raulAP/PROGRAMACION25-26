@@ -23,10 +23,11 @@ public class Ejercicio12T08 {
             String nombre = entrada.next();
             System.out.print("Precio: ");
             double precio = entrada.nextDouble();
+           
 
             muebles[i] = new Mueble(nombre, precio);
             
-            
+           
             
         }
     }
@@ -38,6 +39,7 @@ public class Ejercicio12T08 {
         }
     }
 
+    //metodo mostrar mueble por precio
     
     public static void mostrarMueblesPrecio(Mueble[]mueble){
         System.out.println("Introducir un precio ");
