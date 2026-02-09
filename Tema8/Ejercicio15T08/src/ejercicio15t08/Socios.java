@@ -11,16 +11,16 @@ package ejercicio15t08;
 public class Socios {
      // atributos
     private String nombre;
-    private int precioAbonado;
+    private double precioAbonado;
     
     // constructores
 
     public Socios() {
         this.nombre = "";
-        this.precioAbonado = 0; // la voluntah
+        this.precioAbonado = 0.0; // la voluntad
     }
 
-    public Socios(String nombre, int precioAbonado) {
+    public Socios(String nombre, double precioAbonado) {
         this.nombre = nombre;
         this.precioAbonado = precioAbonado;
     }
@@ -31,7 +31,7 @@ public class Socios {
         this.nombre = nombre;
     }
 
-    public void setPrecioAbonado(int precioAbonado) {
+    public void setPrecioAbonado(double precioAbonado) {
         this.precioAbonado = precioAbonado;
     }
     
@@ -41,7 +41,7 @@ public class Socios {
         return nombre;
     }
 
-    public int getPrecioAbonado() {
+    public double getPrecioAbonado() {
         return precioAbonado;
     }
     

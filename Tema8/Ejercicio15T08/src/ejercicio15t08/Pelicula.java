@@ -13,25 +13,27 @@ import java.util.Scanner;
 public class Pelicula {
      //atributos
     private String titulo;
-    private int costeLicencia;
+    private double costeLicencia;
     private Socios[] socios;
+    private int numSocios; //contador para controlar numero de socios
     
     // constructores
     public Pelicula() {
         this.titulo = "";
         this.costeLicencia = 0;
-        this.socios = new Socios[4]; // por defecto tendrá un tamaño de 4 posiciones
+        this.socios = new Socios[4]; // por defecto tendrá un tamaño de 4 posiciones. será el aforo máximo
+        this.numSocios = 0;
     }
 
-    public Pelicula(String titulo, int costeLicencia, Socios[] socios) {
+    public Pelicula(String titulo, double costeLicencia) {
         this.titulo = titulo;
         this.costeLicencia = costeLicencia;
-        this.socios = socios;
+        this.socios = new Socios[4]; 
     }
     
-    // métodos setters
+    // setters
 
-    public void setCosteLicencia(int costeLicencia) {
+    public void setCosteLicencia(double costeLicencia) {
         this.costeLicencia = costeLicencia;
     }
 
@@ -42,10 +44,13 @@ public class Pelicula {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+   public void setNumSocios(int numSocios){
+       this.numSocios = numSocios;
+   }
     
-    // métodos getters
+    //  getters
 
-    public int getCosteLicencia() {
+    public double getCosteLicencia() {
         return costeLicencia;
     }
 
@@ -55,6 +60,9 @@ public class Pelicula {
 
     public String getTitulo() {
         return titulo;
+    }
+     public int getNumSocios() {
+        return numSocios;
     }
     
     // pide el nombre del socio
@@ -71,24 +79,23 @@ public class Pelicula {
     }
     
     // pide el precio abonado del socio
-    public int precioAbonadoAleatorio() {
+    public double precioAbonadoAleatorio() {
 
         Scanner entrada = new Scanner(System.in);
-        int precioAbonado = (int) (Math.random()*1000000); // numero aleatorio del 0- 1M
+        double precioAbonado = (int) (Math.random()*1000000); // numero aleatorio del 0- 1M
 
         return precioAbonado;
         
     }
     
     // método que rellena 
-    public void rellenarSocios() {
+    public void rellenarSocio(Socios socio) {
         
-        for (int i = 0; i < this.socios.length; i++) {
-            
-            this.socios[i] = new Socios();
-            
-            socios[i].setNombre(pedirNombre()); // inserta un nombre dado por el usuariuo
-            socios[i].setPrecioAbonado(precioAbonadoAleatorio()); // inserta un precio aleatorio
+        if (numSocios < socios.length) {
+            socios[numSocios] = socio;
+            numSocios++;
+        } else{
+            System.out.println("No se pueden añadir más socios a esta película");
         }
     
     }
@@ -98,11 +105,20 @@ public class Pelicula {
     
         System.out.println("Titulo: "+this.titulo);
         System.out.println("Coste de la licencia: "+this.costeLicencia);
-        
+        System.out.println("Beneficio: " + beneficioNeto());
         // tanbien mostraremos los valores del atributo socios[]
         for (int i = 0; i < this.socios.length; i++) {
             socios[i].mostrar();
         }
         
     }
+    
+        // Beneficio neto
+        public double beneficioNeto() {
+            double total = 0;
+            for (int i = 0; i < numSocios; i++) {
+                total += socios[i].getPrecioAbonado();
+            }
+            return total - costeLicencia;
+        }
 }
