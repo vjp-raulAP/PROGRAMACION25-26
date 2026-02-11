@@ -67,8 +67,8 @@ public class Ejercicio15T08 {
     }
     
     public static void mostrarMenu() {
-        System.out.println("--------------------------------");
-        System.out.println("-- Asociacion Nos gusta el cine --");
+        System.out.println("--------------------------------------------------");
+        System.out.println("--------- Asociacion Nos gusta el cine ------------");
         System.out.println("--------------------MENU---------------------------");
         System.out.println("1. Rellenar las peliculas juntos con los socios.");
         System.out.println("2. Mostrar las peliculas y los socios que la han visto.");
