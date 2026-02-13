@@ -67,8 +67,8 @@ public class Ejercicio15T08 {
     }
     
     public static void mostrarMenu() {
-        System.out.println("--------------------------------------------------");
-        System.out.println("--------- Asociacion Nos gusta el cine ------------");
+        System.out.println("--------------------------------");
+        System.out.println("-- Asociacion Nos gusta el cine --");
         System.out.println("--------------------MENU---------------------------");
         System.out.println("1. Rellenar las peliculas juntos con los socios.");
         System.out.println("2. Mostrar las peliculas y los socios que la han visto.");
@@ -81,29 +81,9 @@ public class Ejercicio15T08 {
         System.out.println("Elija una opcion");
     }
     
-    public static String pedirTitulo() {
-
-      
-        String tituloUsuario;
-
-        System.out.println("Introduzca el titulo de la pelicula: ");
-        tituloUsuario = entrada.nextLine();
-
-        return tituloUsuario;
-        
-    }
     
-    public static double pedirCosteLicencia() {
 
-       
-        double costeLicenciaUsuario;
-
-        System.out.println(" por favor,Inserte el coste de la licencia de la peli: ");
-        costeLicenciaUsuario = entrada.nextDouble();
-
-        return costeLicenciaUsuario;
-        
-    }
+    
     
     public static void rellenarPeliculas() {
 
