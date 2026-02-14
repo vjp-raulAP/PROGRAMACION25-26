@@ -11,6 +11,8 @@ import java.util.Scanner;
  * @author alumno
  */
 public class Pelicula {
+    
+    private static final int AFORO = 4;
      //atributos
     private String titulo;
     private double costeLicencia;
@@ -21,7 +23,7 @@ public class Pelicula {
     public Pelicula() {
         this.titulo = "";
         this.costeLicencia = 0;
-        this.socios = new Socios[4]; // por defecto tendrá un tamaño de 4 posiciones. será el aforo máximo
+        this.socios = new Socios[AFORO]; 
         this.numSocios = 0;
     }
 
@@ -107,7 +109,7 @@ public class Pelicula {
         System.out.println("Coste de la licencia: "+this.costeLicencia);
         System.out.println("Beneficio: " + beneficioNeto());
         // tanbien mostraremos los valores del atributo socios[]
-        for (int i = 0; i < this.socios.length; i++) {
+        for (int i = 0; i < numSocios; i++) {
             socios[i].mostrar();
         }
         

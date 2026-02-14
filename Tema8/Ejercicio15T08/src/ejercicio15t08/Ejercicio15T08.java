@@ -41,10 +41,10 @@ public class Ejercicio15T08 {
                    mostrarPeliculas(); 
                     break;
                 case 3:
-                    // peli mas resntable
+                     peliculaMasRentable();
                     break;
                 case 4:
-                    // peli menos rentable
+                    peliculaMenosRentable();
                     break;
                 case 5:
                     
@@ -53,7 +53,7 @@ public class Ejercicio15T08 {
                     
                     break;
                 case 7:
-                    System.out.println("\nSaliendo del programa...");
+                    System.out.println("Saliendo del programa...");
                     salir = true;
                     break;
                 default:
@@ -121,6 +121,46 @@ public class Ejercicio15T08 {
                 System.out.println("------------------------");
             }
         }
+    }
+        
+     public static void peliculaMasRentable() {
+
+        if (salaDeCine[0] == null) {
+            System.out.println("No hay películas registradas.");
+            return;
+        }
+
+        Pelicula mejor = salaDeCine[0];
+
+        for (int i = 1; i < salaDeCine.length; i++) {
+            if (salaDeCine[i] != null && salaDeCine[i].beneficioNeto() > mejor.beneficioNeto()) {
+
+                mejor = salaDeCine[i];
+            }
+        }
+
+        System.out.println("Película más rentable:");
+        mejor.mostrar();
+    }
+     
+    public static void peliculaMenosRentable() {
+
+        if (salaDeCine[0] == null) {
+            System.out.println("No hay películas registradas.");
+            return;
+        }
+
+        Pelicula peor = salaDeCine[0];
+
+        for (int i = 1; i < salaDeCine.length; i++) {
+            if (salaDeCine[i] != null && salaDeCine[i].beneficioNeto() < peor.beneficioNeto()) {
+
+                peor = salaDeCine[i];
+            }
+        }
+
+        System.out.println("Película menos rentable:");
+        peor.mostrar();
     }
 
 }
