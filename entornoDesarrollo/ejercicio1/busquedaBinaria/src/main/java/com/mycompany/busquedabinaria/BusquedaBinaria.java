@@ -1,17 +1,15 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package busquedabinaria;
+
+package com.mycompany.busquedabinaria;
 
 /**
  *
- * @author alumno
+ * @author rulaa
  */
-
-
 public class BusquedaBinaria {
-   private int[] array;
+private int[] array;
 
     // Constructor
     public BusquedaBinaria() {
@@ -44,10 +42,11 @@ public class BusquedaBinaria {
         }
 
         return respuesta;                                                                                          // instruccion 10
-    }                                                                                                                           //instruccion  11 fiin
+    }                                                              
+                             
     public static void main(String[] args) {
-         BusquedaBinaria bb = new BusquedaBinaria();
-        int resultado = bb.busquedaBinaria(2);
+          BusquedaBinaria bb = new BusquedaBinaria();
+        int resultado = bb.busquedaBinaria(15);
 
         if (resultado != -1) {
             System.out.println("Número encontrado en la posición: " + resultado);

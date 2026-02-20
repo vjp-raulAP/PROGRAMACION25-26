@@ -15,9 +15,9 @@ public class SumaPrimos {
         int numero = 2;
         int contador;
         boolean primo;
-
+        System.out.println("Los numeros primos hasta "+numeroMaximo+" son:");
         do {
-            System.out.println(numero);
+            
             contador = 2;
             primo = true;
 
@@ -27,9 +27,11 @@ public class SumaPrimos {
                 }
                 contador++;
             }
-
+             
             if (primo) {
                 acumulador = acumulador + numero;
+               
+                System.out.println(numero);
             }
 
             numero++;
@@ -42,7 +44,8 @@ public class SumaPrimos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         int resultado = sumaPrimos(32) ;
+        
+         int resultado = sumaPrimos(17) ;
         System.out.println("La suma de los primos es: " + resultado);
     }
     
