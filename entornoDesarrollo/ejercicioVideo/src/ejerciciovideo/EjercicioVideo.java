@@ -108,6 +108,9 @@ public class EjercicioVideo {
        } else{
            System.out.println("El número está repetido");
        }
+       //1.11 clonar
+       
+       
     }
     
 
