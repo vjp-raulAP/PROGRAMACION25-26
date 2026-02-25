@@ -39,7 +39,7 @@ public class codigoTest {
    public void testOrdenarPorSeleccionCajaNegra(){
             System.out.println("Comprobacion caja negra");
 
-        assertEquals(true,codigo.ordenarPorSeleccion(new int [] {1,2,3,4}))  ;       
+       
    // Caso 1: lista ya ordenada
         assertEquals(true,codigo.ordenarPorSeleccion(new int [] {1,2,3,4}))  ; 
 
@@ -52,7 +52,7 @@ public class codigoTest {
         // Caso 4: lista vacía
           assertEquals(true,codigo.ordenarPorSeleccion(new int [] {}))  ; 
          
-          //Caso 5 : numero negativo
+          //Caso 5 : numero negativo  (nos deberia salir true, porque directamente no entra en el for)
           
           assertEquals(true,codigo.ordenarPorSeleccion(new int [] {-5}))  ;
     }
