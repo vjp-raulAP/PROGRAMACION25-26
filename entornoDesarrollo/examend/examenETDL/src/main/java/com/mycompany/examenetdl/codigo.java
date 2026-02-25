@@ -10,27 +10,7 @@ package com.mycompany.examenetdl;
  */
 public class codigo {
     public static boolean ordenarPorSeleccion(int[] listaNumeros) {
-      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+     
          int temporal;                                                           // instruccion 1                                   - nodo 1
         boolean listaOrdenada = true;                                // instruccion 2
         
@@ -39,7 +19,8 @@ public class codigo {
                 if(listaNumeros[i] > listaNumeros[j]) {              // instruccion 5                                    - nodo 4
                     temporal = listaNumeros[i];                         // instruccion 6                                  
                     listaNumeros[i] = listaNumeros[j];                // instruccion 7                                     - nodo 5
-                    listaNumeros[j] = temporal;                         // instruccion 8
+                    listaNumeros[j] = temporal;
+                    listaOrdenada = false; 
                                
                 }        // fin del if                                              // instruccion 10                                  
             }         // fin del for j                                            // instruccion 11                                    
