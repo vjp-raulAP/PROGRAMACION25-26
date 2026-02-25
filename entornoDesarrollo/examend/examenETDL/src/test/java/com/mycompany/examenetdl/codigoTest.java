@@ -38,7 +38,11 @@ public class codigoTest {
    @Test 
    public void testOrdenarPorSeleccionCajaNegra(){
             System.out.println("Comprobacion caja negra");
-
+int[] lista5 = {5, 2, 2, 7, 1};
+codigo.ordenarPorSeleccion(lista5);
+assertArrayEquals(new int[]{1, 2, 2, 5, 7}, lista5);
+            
+            
    // Caso 1: lista ya ordenada
         int[] lista1 = {1, 4, 5, 6, 8, 55, 77};
         codigo.ordenarPorSeleccion(lista1);
