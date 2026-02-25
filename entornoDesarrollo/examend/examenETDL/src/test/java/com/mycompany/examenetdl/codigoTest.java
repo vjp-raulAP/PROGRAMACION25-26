@@ -51,7 +51,10 @@ public class codigoTest {
 
         // Caso 4: lista vacía
           assertEquals(true,codigo.ordenarPorSeleccion(new int [] {}))  ; 
-
+         
+          //Caso 5 : numero negativo
+          
+          assertEquals(true,codigo.ordenarPorSeleccion(new int [] {-5}))  ;
     }
    @Test 
    public void testOrdenarPorSeccionCajaBlanca(){
