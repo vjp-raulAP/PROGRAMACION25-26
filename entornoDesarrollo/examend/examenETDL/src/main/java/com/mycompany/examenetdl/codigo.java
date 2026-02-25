@@ -10,6 +10,26 @@ package com.mycompany.examenetdl;
  */
 public class codigo {
     public static boolean ordenarPorSeleccion(int[] listaNumeros) {
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
          int temporal;                                                           // instruccion 1                                   - nodo 1
         boolean listaOrdenada = true;                                // instruccion 2
