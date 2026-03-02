@@ -2,37 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package com.mycompany.examenetdl;
+package com.mycompany.examen;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author rulaa
+ * @author alumno
  */
 public class codigoTest {
     
     public codigoTest() {
+        
+        
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   @Test 
+ @Test 
    public void testOrdenarPorSeleccionCajaNegra(){
             System.out.println("Comprobacion caja negra");
 
@@ -54,16 +40,7 @@ public class codigoTest {
           assertEquals(true,codigo.ordenarPorSeleccion(new int [] {-5}))  ;
     }
    
-   
-
-   
-   
-  
-
-   
-   
-   
-   @Test 
+    @Test 
    public void testOrdenarPorSeccionCajaBlanca(){
         System.out.println("Test de caja blanca  para comprobar caminos");
         
@@ -83,6 +60,7 @@ public class codigoTest {
         
    }
    
-   
-}
+    }    
+    
+    
 
