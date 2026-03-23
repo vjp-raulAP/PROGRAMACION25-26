@@ -10,9 +10,9 @@ package ejercicio6t011;
  */
 public class Donacion {
     private String donante;
-    private int cantidadDonar;
+    private double cantidadDonar;
 
-    public Donacion(String donante, int donacion) {
+    public Donacion(String donante, double donacion) {
         this.donante = donante;
         this.cantidadDonar = donacion;
     }
@@ -26,7 +26,7 @@ public class Donacion {
         return donante;
     }
 
-    public int getDonacion() {
+    public double getDonacion() {
         return cantidadDonar;
     }
 
@@ -34,7 +34,7 @@ public class Donacion {
         this.donante = donante;
     }
 
-    public void setDonacion(int donacion) {
+    public void setDonacion(double donacion) {
         this.cantidadDonar = donacion;
     }
 

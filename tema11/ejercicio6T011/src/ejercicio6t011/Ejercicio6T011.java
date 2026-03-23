@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author alumno
  */
 public class Ejercicio6T011 {
+    
  /**
      * Método que muestra las opciones del menú
      */
@@ -53,11 +54,12 @@ public class Ejercicio6T011 {
     }
     
     
-     public static void añadirDonacion(Donacion[] donaciones) {
+     public static void anadirDonacion(Donacion[] donaciones) {
         Scanner entrada = new Scanner(System.in);
-        int cantidadDonaciones;
+       int cantidadDonaciones;
         System.out.println("Introduce la cantidad de donaciones");
         cantidadDonaciones = entrada.nextInt();
+        entrada.nextLine();
         
         for (int i = 0; i < cantidadDonaciones; i++) {
             System.out.println("Introduce el nombre del donante");
@@ -66,67 +68,97 @@ public class Ejercicio6T011 {
             double cantidad = entrada.nextDouble();
             
             donaciones[i] = new Donacion(nombre,cantidad);
+            entrada.nextLine();
         }
-    
-     /**
-     * Método que ejecuta el menú
-     *
-     * 
-     */
-    public static void menu() {
-         Scanner entrada = new Scanner(System.in);
-        int opcion = -1;
-
-<<<<<<< HEAD
-    
-    pu
-=======
-        do {
-             try {
-            mostrarMenu();
-            System.out.println("Elija una opción");
-            opcion = pedirNum();
-
-            switch (opcion) {
-                case 1:
-                    
-                    break;
-                case 2:
-                    
-                    break;
-                case 3:
-                    
-                    break;
-                case 4:
-                    
-                    break;
-                case 5:
-                    
-                    break;
-                case 6:
-                    
-                    break;
-                case 7:
-                    System.out.println("Saliendo...");
-                    break;
-                default:
-                    System.out.println("Número introducido inválido");
+     
+        }
+        public static void buscarDonante(Donacion[]donaciones) {
+            
+            System.out.println("Introduce el nombre del donante a buscar: ");
+        String nombre = pedirString();
+        boolean encontrado = false;
+        for (Donacion d : donaciones) {
+            if (d != null && d.getDonante().equalsIgnoreCase(nombre)) {
+                System.out.println(d);
+                encontrado = true;
             }
-              } catch (InputMismatchException e) {
-                System.out.println("Error, introduce una opción entre 1 y 7");
-                entrada.nextLine();
-            }
-
-        } while (opcion != 7);
+        }
+        if (!encontrado) System.out.println("No se encontraron donaciones de ese donante.");
     }
-    
->>>>>>> bcdc84b567fca3fedebbcbfa44444a8127ea81bf
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+
+     
+   public static void mostrarDonaciones(Donacion[]donaciones){
+        for (int i = 0; i < donaciones.length; i++) {
+        if (donaciones[i] != null) {
+            System.out.println(donaciones[i]);
+        }
         
+        
+    }
+   }
+   
+   public static void mostrarNumeroDonaciones(Donacion[]donaciones) {
+        int contador = 0;
+        for (Donacion d : donaciones) {
+            if (d != null) contador++;
+        }
+        System.out.println("Número de donaciones: " + contador);
+    }
+   
+    public static void mostrarTotalRecaudado(Donacion[]donaciones) {
+        double total = 0;
+        for (Donacion d : donaciones) {
+            if (d != null) total += d.getDonacion();
+        }
+        System.out.println("Total dinero recaudado: " + total + "€");
+    }
+
+    public static void menu(){
+                  Donacion[] donaciones = new Donacion[100];
+                    Scanner entrada = new Scanner(System.in);
+                   int opcion = -1;
+
+                   do {
+                        try {
+                       mostrarMenu();
+                       System.out.println("Elija una opción");
+                       opcion = pedirNum();
+
+                       switch (opcion) {
+                           case 1:
+                               anadirDonacion(donaciones);
+                               break;
+                           case 2:
+                               mostrarDonaciones(donaciones);
+                               break;
+                           case 3:
+                                buscarDonante(donaciones);
+                               break;
+                           case 4:
+                               mostrarNumeroDonaciones(donaciones);
+                               break;
+                           case 5:
+                                mostrarTotalRecaudado(donaciones);
+                               break;
+                           case 6:
+
+                               break;
+                           case 7:
+                               System.out.println("Saliendo...");
+                               break;
+                           default:
+                               System.out.println("Número introducido inválido");
+                       }
+                         } catch (InputMismatchException e) {
+                           System.out.println("Error, introduce una opción entre 1 y 7");
+                           entrada.nextLine();//limpia buffer
+                       }
+
+                   } while (opcion != 7);
+               }
+  
+    public static void main(String[] args) {
+        menu();
     }
     
 }

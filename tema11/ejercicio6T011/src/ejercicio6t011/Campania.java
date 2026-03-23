@@ -34,6 +34,10 @@ public class Campania {
     public void setNombreCampania(String nombreCampania) {
         this.nombreCampania = nombreCampania;
     }
+    
+    
+   //metodos
+    
 
     @Override
     public String toString() {
