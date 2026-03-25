@@ -100,7 +100,9 @@ public class Ejercicio6T011 {
    public static void mostrarNumeroDonaciones(Donacion[]donaciones) {
         int contador = 0;
         for (Donacion d : donaciones) {
-            if (d != null) contador++;
+            if (d != null){
+                contador++;
+            }
         }
         System.out.println("Número de donaciones: " + contador);
     }
@@ -108,9 +110,15 @@ public class Ejercicio6T011 {
     public static void mostrarTotalRecaudado(Donacion[]donaciones) {
         double total = 0;
         for (Donacion d : donaciones) {
-            if (d != null) total += d.getDonacion();
+            if (d != null) {
+                total += d.getDonacion();
+            }
         }
-        System.out.println("Total dinero recaudado: " + total + "€");
+        System.out.println("Total dinero recaudado: " + total + " euros");
+    }
+    
+    public static void mostrarOrdenadas(Donacion[]donaciones){
+        
     }
 
     public static void menu(){
@@ -141,7 +149,7 @@ public class Ejercicio6T011 {
                                 mostrarTotalRecaudado(donaciones);
                                break;
                            case 6:
-
+                               //mostrar ordenadas de mayor a menor
                                break;
                            case 7:
                                System.out.println("Saliendo...");
