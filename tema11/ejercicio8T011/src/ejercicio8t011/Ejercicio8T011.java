@@ -122,7 +122,7 @@ public static boolean buscarSede(String nombreSede, Map<String, Ciudad> mCiudade
 
             // Comprobamos si el nombre de la sede coincide
             if (s.getNombreSede().equalsIgnoreCase(nombreSede)) {
-                System.out.println("Sede '" + nombreSede + "' encontrada en la ciudad: " + ciudad.getNombre());
+                System.out.println("La sede '" + nombreSede + "' se encuentra en la ciudad: " + ciudad.getNombre());
                 return true; // Se encontró la sede
             }
         }
@@ -157,7 +157,10 @@ public static void agregarSede(Map<String, Ciudad> mCiudades) {
 
 
 //No se como hacer .mostrarSedesOrdenadas
-
+public static void mostrarSedesOrdenadas(Map<String, Ciudad> mCiudades){
+    
+    
+}
 
 
     /**
@@ -190,7 +193,7 @@ public static void agregarSede(Map<String, Ciudad> mCiudades) {
                     case 3 -> sedesSobreMedia(mCiudades);
                     case 4 -> buscarSede(pedirString("¿Cual es el nombre de la Sede?: "), mCiudades);
                     case 5 -> agregarSede(mCiudades);
-                    //case 6 -> mostrarSedesOrdenadas;
+                    case 6 -> mostrarSedesOrdenadas(mCiudades);
                     case 7 -> System.out.println("Fin del programa");
                     default -> System.out.println("Opción no válida, elige una opción entre 1-7");
                 }
