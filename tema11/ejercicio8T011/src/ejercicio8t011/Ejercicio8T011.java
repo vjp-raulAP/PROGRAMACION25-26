@@ -6,6 +6,8 @@ package ejercicio8t011;
 
 import java.util.HashMap;
 import java.util.InputMismatchException;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -107,16 +109,34 @@ public class Ejercicio8T011 {
     * @return 
     */
 public static boolean buscarSede(String nombreSede, Map<String, Ciudad> mCiudades) {
-    for (String nombre : mCiudades.keySet()) { // Recorremos cada ciudad
-        for (Sede s : mCiudades.get(nombre).getSedes()) { // Recorremos sus sedes
-            if (s.getNombreSede().equalsIgnoreCase(nombreSede)) { // Si coincide el nombre
-                return true; // La sede existe
+    // Iterador sobre las ciudades
+    Iterator<Ciudad> itCiudades = mCiudades.values().iterator();
+
+    while (itCiudades.hasNext()) {
+        Ciudad ciudad = itCiudades.next();
+
+        // Iterador sobre las sedes de la ciudad
+        Iterator<Sede> itSedes = ciudad.getSedes().iterator();
+        while (itSedes.hasNext()) {
+            Sede s = itSedes.next();
+
+            // Comprobamos si el nombre de la sede coincide
+            if (s.getNombreSede().equalsIgnoreCase(nombreSede)) {
+                System.out.println("Sede '" + nombreSede + "' encontrada en la ciudad: " + ciudad.getNombre());
+                return true; // Se encontró la sede
             }
         }
     }
-    return false; // No se encontró la sede
+
+    // Si llegamos aquí, no se encontró la sede
+    System.out.println("No se encontró la sede: '" + nombreSede + "'.");
+    return false;
 }
      
+/**
+ * Metodo para agregar Sede pasandole el mapa
+ * @param mCiudades 
+ */
 public static void agregarSede(Map<String, Ciudad> mCiudades) {
 
         String nombreCiudad = pedirString("Ciudad: ");
@@ -168,11 +188,11 @@ public static void agregarSede(Map<String, Ciudad> mCiudades) {
                     case 1 -> insertarCiudad(mCiudades);
                     case 2 -> mostrarCiudades(mCiudades);
                     case 3 -> sedesSobreMedia(mCiudades);
-                    case 4 -> System.out.println(buscarSede(pedirString("Sede: "), mCiudades));
+                    case 4 -> buscarSede(pedirString("¿Cual es el nombre de la Sede?: "), mCiudades);
                     case 5 -> agregarSede(mCiudades);
                     //case 6 -> mostrarSedesOrdenadas;
                     case 7 -> System.out.println("Fin del programa");
-                    default -> System.out.println("Opción no válida");
+                    default -> System.out.println("Opción no válida, elige una opción entre 1-7");
                 }
 
             } catch (InputMismatchException e) {
