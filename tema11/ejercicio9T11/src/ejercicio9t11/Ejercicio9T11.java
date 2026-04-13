@@ -4,6 +4,9 @@
  */
 package ejercicio9t11;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  *
  * @author alumno
@@ -14,7 +17,9 @@ public class Ejercicio9T11 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+         Map<Integer , Sorteo> sorteoLoteria = new TreeMap<>();
+         
+         
     }
     
 }
