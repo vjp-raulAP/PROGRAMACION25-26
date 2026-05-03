@@ -1,0 +1,21 @@
+Nombre y apellidos: raul
+Sexo (H-M): v
+Edad (20-60): 32
+Número de suspensos del curso anterior (0-4): 3
+Residencia familiar (SI-NO): plas
+Ingresos anuales de la familia: 1200.0
+
+Nombre y apellidos: raul albalat
+Sexo (H-M): v
+Edad (20-60): 32
+Número de suspensos del curso anterior (0-4): 3
+Residencia familiar (SI-NO): plasencia
+Ingresos anuales de la familia: 1200.0
+
+Nombre y apellidos: paco pause
+Sexo (H-M): v
+Edad (20-60): 32
+Número de suspensos del curso anterior (0-4): 2
+Residencia familiar (SI-NO): plasencia
+Ingresos anuales de la familia: 1200.0
+

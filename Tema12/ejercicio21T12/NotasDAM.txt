@@ -1,0 +1,6 @@
+Programación:4.0
+Lenguaje de marcas:6.0
+Bases de Datos:7.0
+Entorno de desarrollo:8.0
+Sistemas Informaticos:9.0
+FOL:0.0
