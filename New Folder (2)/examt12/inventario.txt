@@ -1,0 +1,3 @@
+[nombre:rr 
+cantidad:11 
+ precio:123.0]
