@@ -34,12 +34,11 @@ public class PracticaT13 {
           
             // SELECT INICIAL
            
-            System.out.println("---- SELECT ALUMNOS ----");
-
-            String sqlSelect = "SELECT id, nombre, apellido, email FROM alumnos WHERE activo = true ORDER BY apellido";
+            System.out.println("---- Leyendo datos de alumnos ----");
             Statement stmt = conexion.createStatement();  // Statement  lo usamos para consultas simples
-            ResultSet rs = stmt.executeQuery(sqlSelect); // Ejecuta la consulta SELECT y guarda el resultado
-            
+            ResultSet rs = stmt.executeQuery( "SELECT id, nombre, apellido, email FROM alumnos WHERE activo = true ORDER BY apellido"); // Ejecuta la consulta SELECT y guarda el resultado
+            System.out.println("Se ha accedido a los datos correctamente.");
+            System.out.println("\nMostrando datos...");
             while (rs.next()) {
                 System.out.println(
                         rs.getInt("id") + " - " +
@@ -52,7 +51,7 @@ public class PracticaT13 {
         
             // INSERT
            
-            System.out.println("\n=== INSERT ALUMNO ===");
+            System.out.println("\n Insertando nuevo alumno...");
 
             String sqlInsert = "INSERT INTO alumnos (nombre, apellido, email, fecha_nacimiento, telefono, direccion, ciudad, codigo_postal) "
                     + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
@@ -69,8 +68,8 @@ public class PracticaT13 {
             psInsert.setString(7, "Madrid");
             psInsert.setString(8, "28010");
 
-            int insertados = psInsert.executeUpdate();
-            System.out.println("Filas insertadas: " + insertados);
+            int filasInsertadas = psInsert.executeUpdate();
+            System.out.println("Filas insertadas: " + filasInsertadas);
 
            
             // SELECT DEL NUEVO ALUMNO 
@@ -96,7 +95,7 @@ public class PracticaT13 {
            
             // UPDATE
            
-            System.out.println("\n--------UPDATE CURSOS -------");
+            System.out.println("\nActualizando curso...-");
 
             String sqlUpdate = "UPDATE cursos SET profesor = ?, aula = ? WHERE nombre = ?";
 
@@ -105,13 +104,13 @@ public class PracticaT13 {
             psUpdate.setString(2, "Z999");
             psUpdate.setString(3, "Programación Java");
 
-            int actualizados = psUpdate.executeUpdate();
-            System.out.println("Filas actualizadas: " + actualizados);
+            int filasActualizadas = psUpdate.executeUpdate();
+            System.out.println("Filas actualizadas: " + filasActualizadas);
 
           
             // DELETE
            
-            System.out.println("----DELETE CURSOS ----");
+            System.out.println("\nEliminando curso...");
 
             String sqlDelete = "DELETE FROM cursos WHERE nombre = ?";
 
@@ -123,7 +122,7 @@ public class PracticaT13 {
 
        
             // CIERRE
-        
+            //cerramos la conexion
             conexion.close();
             System.out.println("\nConexión cerrada.");
 
