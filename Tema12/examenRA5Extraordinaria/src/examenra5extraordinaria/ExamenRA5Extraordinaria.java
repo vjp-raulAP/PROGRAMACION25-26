@@ -20,8 +20,11 @@ import javax.imageio.stream.FileCacheImageInputStream;
  * @author alumno
  */
 public class ExamenRA5Extraordinaria {
+    
+    //Creo una variable fichero que utilizaré para el archivo de texto prestamos.
   public static final   String FICHERO ="prestamos.txt" ;
   
+  //metodo para pedir los datos para el registro de prestamos
   public static Agenda pedircontacto(){
       Scanner entrada = new Scanner (System.in);
       System.out.println("Nombre: ");
@@ -33,6 +36,7 @@ public class ExamenRA5Extraordinaria {
       System.out.println("Días de ptrestamo: ");
       int diasPrestamo = entrada.nextInt();
      entrada.nextLine(); //limpiar el buffer.
+     //introduczo los datos obtenidos en el objeto Agenda.
        Agenda contacto = new Agenda(nombre,titulo,autor,diasPrestamo);
        return contacto;
   }
@@ -40,19 +44,19 @@ public class ExamenRA5Extraordinaria {
     public static void rellenarContacto(ArrayList<Agenda> contactos) {
         Scanner entrada = new Scanner(System.in);
         String seguir;
-        do {
+        do { //para preguntar si quiero meter mas registros
             Agenda contacto = pedircontacto();
             contactos.add(contacto);
             System.out.println(" Usuario añadido");
             System.out.println("¿desea añadir mas usuario? (s/n)");
             seguir = entrada.nextLine();
 
-        } while (seguir.equalsIgnoreCase("s"));
+        } while (seguir.equalsIgnoreCase("s"));  
     }
-  
+  //metodo en el que registramos los préstamos pasando  el ArrayList  y usamos el try-Catch con recursos
     public static void registrarPrestamo(ArrayList<Agenda> contactos) throws FileNotFoundException, IOException {
         System.out.println("Registrando fichero");
-        try (FileWriter fw = new FileWriter(FICHERO, true); PrintWriter pw = new PrintWriter(fw)) {
+        try (FileWriter fw = new FileWriter(FICHERO, true); PrintWriter pw = new PrintWriter(fw)) {   // true para que se escriba seguido
             for (Agenda contacto : contactos) {
                 pw.println(contacto.getNombre() + ";" + contacto.getTitulo() + ";" + contacto.getAutor() + ";" + contacto.getDiasPrestados());
 
@@ -62,6 +66,7 @@ public class ExamenRA5Extraordinaria {
         System.out.println("Registrando Prestamos en el Fichero..");
     }
     
+    //Metodo  que nos permite mostrar los prestamos  desde el fichero . usamos el try-Catch con recursos
     public static void mostrarPrestamos(ArrayList<Agenda> contactos) throws FileNotFoundException, IOException {
         System.out.println("Leyendo archivo");
       
@@ -74,16 +79,14 @@ public class ExamenRA5Extraordinaria {
                     datos[i] = datos[i].trim();
                 }
                 if (datos.length == 4) {
-                    System.out.println("Nombre" + datos[0]);
-                    System.out.println("Título del libro" + datos[1]);
-                    System.out.println("Autor del libro" + datos[2]);
-                    System.out.println("Días de Prestamo" + datos[3]);
+                    System.out.println("Nombre: " + datos[0]);
+                    System.out.println("Título del libro: " + datos[1]);
+                    System.out.println("Autor del libro: " + datos[2]);
+                    System.out.println("Días de Prestamo: " + datos[3]);
 
                 }
-
             }
         }
-
     }
     
     public static void menu(){
@@ -99,6 +102,7 @@ public class ExamenRA5Extraordinaria {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        //creo el ArrayList donde guardaremos los datos.
       ArrayList<Agenda>contactos = new ArrayList<>();
       int opcion;
         do {   
